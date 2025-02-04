@@ -439,97 +439,86 @@ footer a:hover {
 }
 
 /******************************************************
-  CONTACT FORM SECTION - Similar to Colorlib v15
+  📌 CONTACT FORM SECTION - Professional Look
 ******************************************************/
 
 /* Full-width background for the contact form area */
 .contact-section {
-  /*
-    Swap in a background image if desired (like your datacenter image):
-    background: url('images/datacenter-bg.jpg') center center/cover no-repeat;
-  */
-  background: #2f2f2f; /* Fallback if no image */
-  padding: 100px 20px;
+  background: url('images/network-2402637_1280.jpg') center center/cover no-repeat; /* Ensures sleek background */
+  padding: 80px 20px;
   text-align: center;
   min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Centered, white form box */
+/* Contact form container */
 .contact-form-container {
-  max-width: 500px;
-  margin: 0 auto;
-  background: #ffffff; /* White form background for contrast */
-  color: #333;         /* Dark text for the form */
-  padding: 40px 30px;
-  border-radius: 8px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  max-width: 550px; /* Increased width */
+  width: 100%;
+  background: var(--card-bg);
+  padding: 40px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+  text-align: center;
 }
 
+/* Contact form heading */
 .contact-form-container h2 {
-  font-size: 1.8em;
+  font-size: 2em;
+  color: var(--accent-color);
   margin-bottom: 10px;
-  color: #333;
 }
 
 .contact-form-container p {
   font-size: 1em;
+  color: var(--text-color);
   margin-bottom: 30px;
-  color: #666;
 }
 
-/* Contact Form Styling */
-.contact-form {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  background: var(--card-bg);
-  border-radius: 8px;
-  border: 1px solid var(--border-color);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Input, Select, and Textarea Styling */
+/* Styling for input fields */
 .contact-form input,
 .contact-form select,
 .contact-form textarea {
   width: 100%;
-  padding: 12px 15px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+  padding: 14px;
   font-size: 1rem;
-  font-family: inherit;
-  color: #333;
-  background: #f9f9f9;
-  outline: none;
-  transition: border-color 0.2s ease;
+  border: 2px solid var(--border-color);
+  background: var(--bg-color);
+  color: var(--text-color);
+  border-radius: 6px;
+  margin-bottom: 20px;
+  transition: border-color 0.3s ease;
 }
 
+/* Ensuring consistent dropdown appearance */
+.contact-form select {
+  appearance: none;
+  background: var(--bg-color);
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+/* Hover/Focus Effects */
 .contact-form input:focus,
 .contact-form select:focus,
 .contact-form textarea:focus {
   border-color: var(--accent-color);
 }
 
-/* Placeholder Text */
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
-  opacity: 0.6;
-  font-style: italic;
-}
-
-/* Submit Button */
+/* Styling for the submit button */
 .submit-btn {
-  display: inline-block;
+  width: 100%;
+  padding: 14px;
   background: var(--accent-color);
-  color: white;
-  padding: 12px 30px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-  text-align: center;
+  color: var(--button-text);
   font-size: 1rem;
   border: none;
+  border-radius: 6px;
   cursor: pointer;
+  font-weight: bold;
   transition: background 0.3s ease, transform 0.2s ease;
 }
 
