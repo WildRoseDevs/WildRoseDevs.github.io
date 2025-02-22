@@ -6,12 +6,12 @@ document.addEventListener('DOMContentLoaded', () => {
     if (canvas) {
       const ctx = canvas.getContext('2d');
       let width, height;
-      const POINTS_COUNT = 150;
-      const MAX_DISTANCE = 220;
+      const POINTS_COUNT = 80;
+      const MAX_DISTANCE = 300;
       const VELOCITY_SCALE = 0.0005;
-      const BOUNCE_FACTOR = 0.06;
+      const BOUNCE_FACTOR = 0.006;
       const REPULSION_RADIUS = 60;
-      const REPULSION_FORCE = 0.009;
+      const REPULSION_FORCE = 0.005;
       let mx = -9999, my = -9999;
       const points = [];
     
