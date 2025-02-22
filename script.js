@@ -24,7 +24,9 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', resizeCanvas);
     resizeCanvas();
   
-    // Initialize random points, biased to the edges
+    // Initialize random points, biased to spawn near the edges (with buffer)
+    const edgeBuffer = 0.1;  // 10% buffer from edge
+  
     for (let i = 0; i < POINTS_COUNT; i++) {
       // Randomly decide whether to place on top, bottom, left, or right edge
       const edge = Math.floor(Math.random() * 4);  // 0 = top, 1 = bottom, 2 = left, 3 = right
@@ -32,15 +34,15 @@ document.addEventListener('DOMContentLoaded', () => {
   
       if (edge === 0) {  // Top edge
         x = Math.random() * width;
-        y = 0;
+        y = Math.random() * (height * edgeBuffer);  // Spawn near the top, but not directly at the edge
       } else if (edge === 1) {  // Bottom edge
         x = Math.random() * width;
-        y = height;
+        y = height - Math.random() * (height * edgeBuffer);  // Spawn near the bottom, with buffer
       } else if (edge === 2) {  // Left edge
-        x = 0;
+        x = Math.random() * (width * edgeBuffer);  // Spawn near the left edge
         y = Math.random() * height;
       } else {  // Right edge
-        x = width;
+        x = width - Math.random() * (width * edgeBuffer);  // Spawn near the right edge
         y = Math.random() * height;
       }
   
