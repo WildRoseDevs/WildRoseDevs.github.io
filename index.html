@@ -1,120 +1,453 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dev. Jack | JM &amp; Co</title>
-  <!-- Google Font for a modern look -->
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
-  <!-- Font Awesome (updated link) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous"/>
-  <link rel="stylesheet" href="styles.css" />
+  <title>Company Profile</title>
+  <link rel="stylesheet" href="normalize.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet" />
 </head>
-<body>
-  <!-- Header with Branding and Navigation -->
-  <header>
-    <div class="container header-container">
-      <div class="branding">
-        <h1>Dev. Jack</h1>
-        <span class="tagline">JM &amp; Co</span>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
+<body>
+  <!-- Start Header -->
+  <div class="header" id="header">
     <div class="container">
-      <h2>Your Vision, Our Expertise</h2>
-      <p>From concept to execution, we build stunning, high-performance websites tailored to your needs.</p>
-      <a href="contact.html" class="cta-button">Let's Work Together</a>
+      <a href="#" class="logo">
+        <img src="./img/alberta-28548_1280.png" alt="Wild Rose Devs" style="max-height:60px;">
+      </a>
+
+      <ul class="main-nav">
+
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#Our Work">Our Work</a></li>
+
+        <li><a href="#our-team">Our Team</a></li>
+        <li><a href="#">More</a>
+          <!-- Start MegMenu -->
+          <div class="mega-menu">
+            <div class="image">
+              <img src="./img/Wild-Rose-Devs-Logo.jpg" alt="megmenu-image" />
+            </div>
+            <ul class="links">
+              <li>
+                <a href="#services">
+                  <i class="far fa-building fa-fw"></i> Services
+                </a>
+              </li>
+              <li>
+                <a href="#faqs">
+                  <i class="fa-regular fa-circle-question"></i> FAQs
+                </a>
+              </li>
+            </ul>
+            <ul class="links">
+              <li>
+                <a href="#pricing">
+                  <i class="fas fa-server fa-fw"></i> Pricing Plans
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- End MegMenu -->
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- End Header -->
+
+  <!-- Scroll to top button -->
+  <button id="scroll-up" onclick="topScroll()"><i class="fa-solid fa-angles-up"></i></button>
+
+  <!-- Start Hero Section -->
+  <section class="hero">
+    <canvas id="canvas"></canvas>
+    <div class="hero-content">
+      <h1>Built in Alberta, Made for Your Business</h1>
+      <p>
+        We create fully customized websites using <strong>HTML, CSS, and JS</strong> – no templates, no platform
+        lock-in.
+        100% scalable. <strong>Get your website preview before you pay!</strong>
+      </p>
+      <!-- CTA Buttons -->
+      <div class="buttons">
+        <a href="#projects">Get Started</a>
+        <a href="#Contact Section" class="donate">Contact Us</a>
+      </div>
     </div>
   </section>
+  <!-- End Hero Section -->
 
-  <!-- Projects Showcase -->
-  <main class="container">
-    <section class="projects">
-      <h2>Projects</h2>
-      
-      <!-- Project Card 1 -->
-      <div class="project-card">
-        <div class="project-info">
-          <h3>United Conservative Party: Lethbridge West Consitituency</h3>
-          <p>
-            Dev. Jack recently undertook a comprehensive redesign of the Lethbridge-West Constituency website, elevating its visual 
-            appeal and functionality beyond the standard set by the main United Conservative Party site. 
-            The revamped site boasts a modern, adaptive interface with intuitive navigation, 
-            ensuring visitors can effortlessly access pertinent information. 
-            High-resolution imagery and design improvements enhance the aesthetic experience, reflecting the dynamic 
-            spirit of the Lethbridge-West community.
-          </p>
-        </div>
-        <div class="project-video">
-          <video controls poster="images/video-poster.jpg">
-            <source src="videos/project-demo.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </div>
-      </div>
-
-      <!-- Project Card 2 -->
-      <div class="project-card">
-        <div class="project-info">
-          <h3>Dhillon Business Students' Association (DBSA)</h3>
-          <p>
-            Recognizing the need for a centralized, engaging, and user-friendly platform for the DBSA (Designated Business Students’ Association), 
-            I took the initiative to design and develop a brand-new website from scratch. The new site functions as a landing page-style 
-            hub, providing students with seamless access to club information, events, and opportunities, while also catering to potential 
-            sponsors and external stakeholders. By integrating a modern UI, improved navigation, and a structured layout, the website 
-            enhances communication and fosters engagement within the student body. This project underscores my commitment to improving 
-            student experiences through innovative web solutions, ensuring that the DBSA remains accessible, professional, and 
-            connected to its members.
-          </p>
-        </div>
-        <div class="project-video">
-          <video controls poster="images/video-poster.jpg">
-            <source src="videos/project-demo.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </div>
-      </div>
-    </section>
-
-    <!-- Testimonials Section
-    <section class="testimonials">
-      <h2>Testimonials</h2>
-      <div class="testimonial">
-        <p>
-          "Dev. Jack’s work is a masterclass in design and functionality. Every project is a narrative that captivates and inspires."
-          <span class="author">— A Satisfied Client</span>
-        </p>
-      </div>
-      <div class="testimonial">
-        <p>
-          "Working with Dev. Jack transformed our digital presence. His ability to fuse art with technology is unmatched."
-          <span class="author">— Another Happy Client</span>
-        </p>
-      </div>
-    </section>
-  </main>
-    -->
-  
-  <!-- Footer with Social Links -->
-  <footer>
+  <!-- Start Projects Section (was “article”) -->
+  <div class="article" id="projects">
+    <h2 class="main-title">Our Projects</h2>
     <div class="container">
-      <div class="footer-social">
-        <a href="https://github.com/JM-n-Co" target="_blank" aria-label="GitHub">
-          <i class="fab fa-github"></i>
-        </a>
+      <!-- Example Project Cards -->
+      <div class="box">
+        <img src="img/art1.jpg" alt="Project Image 1" />
+        <div class="content">
+          <h3>Project Title</h3>
+          <p>
+            Brief description of the project. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+          </p>
+        </div>
+        <div class="info">
+          <a href="#">Read More</a>
+          <i class="fa-solid fa-right-long"></i>
+        </div>
       </div>
-      <p>&copy; 2025 <a href="https://github.com/JM-n-Co" target="_blank">Dev. Jack | JM & Co.</a> All rights reserved.</p>
+      <div class="box">
+        <img src="img/art2.avif" alt="Project Image 2" />
+        <div class="content">
+          <h3>Project Title</h3>
+          <p>
+            Another short description. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+          </p>
+        </div>
+        <div class="info">
+          <a href="#">Read More</a>
+          <i class="fa-solid fa-right-long"></i>
+        </div>
+      </div>
+      <!-- Add as many project boxes as needed -->
     </div>
-  </footer>
+  </div>
+  <div class="spikes"></div>
+  <div class="splitter4"></div>
+  <!-- End Projects Section -->
+
+  <!-- Our Work Section -->
+  <div class="gallery" id="Our Work">
+    <h2 class="main-title">Our Work</h2>
+    <div class="container">
+      <div class="box">
+        <div class="image">
+          <img src="img/UCP-website-preview.png" alt="Lethbridge-West United Conservative Party" />
+          <a href="https://lethbridgewestucp.ca" class="visit-btn">Visit This Website</a>
+        </div>
+      </div>
+      <div class="box">
+        <div class="image">
+          <img src="img/racing-nodes.png" alt="Portfolio Site - Racing Nodes" />
+        </div>
+      </div>
+      <div class="box">
+        <div class="image">
+          <img src="img/interlinking-web.png" alt="Portfolio Site - Interlinking Web" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Our Work -->
+
+  <!-- Services Section -->
+  <div class="services" id="services">
+    <h2 class="main-title">Services</h2>
+    <div class="container">
+      <div class="box">
+        <i class="fa-solid fa-user-shield"></i>
+        <h3>Web Development</h3>
+        <div class="info">
+          <a href="#">Details</a>
+        </div>
+      </div>
+      <div class="box">
+        <i class="fa-solid fa-screwdriver-wrench"></i>
+        <h3>Issue Fixes</h3>
+        <div class="info">
+          <a href="#">Details</a>
+        </div>
+      </div>
+      <div class="box">
+        <i class="fa-solid fa-chart-column"></i>
+        <h3>Site Maintenance</h3>
+        <div class="info">
+          <a href="#">Details</a>
+        </div>
+      </div>
+      <div class="box">
+        <i class="fa-solid fa-laptop-code"></i>
+        <h3>Data Analysis</h3>
+        <div class="info">
+          <a href="#">Details</a>
+        </div>
+      </div>
+      <div class="box">
+        <i class="fa-solid fa-palette"></i>
+        <h3>Web Designs</h3>
+        <div class="info">
+          <a href="#">Details</a>
+        </div>
+      </div>
+      <div class="box">
+        <i class="fa-solid fa-bullhorn"></i>
+        <h3>SEO</h3>
+        <div class="info">
+          <a href="#">Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Services -->
+
+  <!-- Start Pricing Section -->
+  <div class="pricing" id="pricing">
+    <div class="dots dots-up"></div>
+    <div class="dots dots-down"></div>
+    <h2 class="main-title">PRICING PLANS</h2>
+    <div class="container">
+      <!-- Essential Plan -->
+      <div class="box">
+        <div class="titel">Essential</div>
+        <img src="img/hosting-basic.png" alt="Essential Hosting" />
+        <div class="price">
+          <span>$15</span>
+          <span>Per Month</span>
+        </div>
+        <ul>
+          <li><i class="fa-solid fa-check"></i>5GB NVME Storage</li>
+          <li><i class="fa-solid fa-check"></i>Up to 2 Websites</li>
+          <li><i class="fa-solid fa-check"></i>Free SSL Certificate</li>
+          <li><i class="fa-solid fa-check"></i>Weekly Backups</li>
+          <li><i class="fa-solid fa-check"></i>9-5 Support</li>
+          <li><i class="fa-solid fa-check"></i>Basic Security Protection</li>
+        </ul>
+        <a href="#">Choose Plan</a>
+      </div>
+
+      <!-- Advanced Plan -->
+      <div class="box popular">
+        <div class="label">Most Popular</div>
+        <div class="titel">Advanced</div>
+        <img src="img/hosting-advanced.png" alt="Advanced Hosting" />
+        <div class="price">
+          <span>$25</span>
+          <span>Per Month</span>
+        </div>
+        <ul>
+          <li><strong>Includes all Essential features, plus these new & improved options:</strong></li>
+          <li><i class="fa-solid fa-check"></i><strong>Improved:</strong> 15GB NVME Storage (vs. 5GB)</li>
+          <li><i class="fa-solid fa-check"></i><strong>Improved:</strong> Up to 10 Websites (vs. 2)</li>
+          <li><i class="fa-solid fa-check"></i><strong>New:</strong> Automatic Daily Backups</li>
+          <li><i class="fa-solid fa-check"></i><strong>New:</strong> 10 Business Email Accounts</li>
+          <li><i class="fa-solid fa-check"></i><strong>New:</strong> Unlimited Bandwidth</li>
+          <li><i class="fa-solid fa-check"></i><strong>Improved:</strong> Advanced Security & Malware Protection</li>
+          <li><i class="fa-solid fa-check"></i><strong>New:</strong> 24/7 Support (vs. 9-5)</li>
+        </ul>
+        <a href="#">Choose Plan</a>
+      </div>
+
+      <!-- Professional Plan -->
+      <div class="box">
+        <div class="titel">Professional</div>
+        <img src="img/hosting-professional.png" alt="Professional Hosting" />
+        <div class="price">
+          <span>$45</span>
+          <span>Per Month</span>
+        </div>
+        <ul>
+          <li><strong>Includes all Advanced features, plus these new & improved options:</strong></li>
+          <li><i class="fa-solid fa-check"></i><strong>Improved:</strong> 100GB NVME Storage (vs. 15GB)</li>
+          <li><i class="fa-solid fa-check"></i><strong>Improved:</strong> Up to 50 Websites (vs. 10)</li>
+          <li><i class="fa-solid fa-check"></i><strong>Improved:</strong> Automatic & Manual Backups (vs. Automatic
+            only)</li>
+          <li><i class="fa-solid fa-check"></i><strong>Improved:</strong> Unlimited Email Accounts (vs. 10)</li>
+          <li><i class="fa-solid fa-check"></i><strong>Improved:</strong> Premium Security & DDoS Protection</li>
+          <li><i class="fa-solid fa-check"></i><strong>New:</strong> Free Migration Included</li>
+          <li><i class="fa-solid fa-check"></i><strong>New:</strong> Dedicated Support & Account Manager</li>
+        </ul>
+        <a href="#">Choose Plan</a>
+      </div>
+    </div>
+  </div>
+  <!-- End Pricing -->
+
+
+  <div class="splitter4"></div>
+
+  <!-- Start Our Team (replaces “testimonials”) -->
+  <div class="our-team" id="our-team">
+    <h2 class="main-titletestimonials">Meet Our Team</h2>
+    <div class="container">
+      <!-- Example Team Member 1 -->
+      <div class="box">
+        <!-- Replace with each team member's image -->
+        <img src="img/GALLERY3.jpg" alt="Team Member 1">
+        <h3>Jane Smith</h3>
+        <span class="titel">Lead Designer</span>
+        <p>
+          Jane is our talented designer who crafts stunning visuals and user experiences.
+          She specializes in UI/UX and brand identity.
+        </p>
+      </div>
+
+      <!-- Example Team Member 2 -->
+      <div class="box">
+        <img src="img/GALLERY4.jpg" alt="Team Member 2">
+        <h3>John Doe</h3>
+        <span class="titel">Full Stack Developer</span>
+        <p>
+          John handles complex coding challenges and ensures seamless functionality.
+          He’s fluent in HTML, CSS, JS, React, Node, and more.
+        </p>
+      </div>
+
+      <!-- Additional Team Members as needed -->
+      <!--
+    <div class="box">
+      <img src="img/team-member3.jpg" alt="Team Member 3">
+      <h3>Michael Johnson</h3>
+      <span class="titel">Project Manager</span>
+      <p>
+        Michael coordinates projects from start to finish, ensuring on-time 
+        deliveries and top-notch communication.
+      </p>
+    </div>
+    -->
+    </div>
+  </div>
+  <!-- End Our Team -->
+
+
+  <div class="splitter4"></div>
+
+  <!-- CONTACT SECTION START -->
+  <section class="contact-section" id="Contact Section">
+    <div class="contact-container">
+      <h2 class="ContactHeader">Let's Create Something Remarkable Together</h2>
+      <p>Let’s discuss how we can bring your vision to life. Connect with us.</p>
+
+      <div class="contact-content">
+        <!-- Left Column: Form -->
+        <div class="form-column">
+          <form action="/contact" method="POST" enctype="multipart/form-data">
+            <!-- Row 1: Name & Email -->
+            <div class="contact-row">
+              <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="Name" placeholder="Your Name" />
+              </div>
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="Email" placeholder="Your Email" />
+              </div>
+            </div>
+            <!-- Row 2: Phone & Project Name -->
+            <div class="contact-row">
+              <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="Phone" placeholder="Your Phone Number" />
+              </div>
+              <div class="form-group">
+                <label for="project-name">Project Name:</label>
+                <input type="text" id="project-name" name="Project Name" placeholder="Your Project Name" />
+              </div>
+            </div>
+            <!-- Describe your idea -->
+            <div class="form-group">
+              <label for="idea">Describe your idea:</label>
+              <textarea id="idea" name="Idea" rows="4" placeholder="Describe your idea here..."></textarea>
+            </div>
+            <!-- Row 3: Budget & How did you hear about us? -->
+            <div class="contact-row">
+              <div class="form-group">
+                <label for="budget">What is your budget?</label>
+                <select id="budget" name="Budget">
+                  <option value="">Pick Option</option>
+                  <option value="500-1000">$500 - $1000</option>
+                  <option value="1000-2000">$1000 - $2000</option>
+                  <option value="2000-5000">$2000 - $5000</option>
+                  <option value="5000+">$5000+</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="hear-about">How did you hear about us?</label>
+                <select id="hear-about" name="Heard About Us">
+                  <option value="">Pick Option</option>
+                  <option value="google">Google</option>
+                  <option value="social">Social Media</option>
+                  <option value="friend">Friend/Referral</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="files">Drop files (PDF, Word, etc.):</label>
+              <input type="file" id="files" name="Files" multiple />
+            </div>
+            <button type="submit">SEND</button>
+          </form>
+        </div>
+        <!-- Right Column: (optional for image/notes) -->
+        <div class="ad-column">
+          <!-- Example usage 
+          <img src="img/contact-ad.jpg" alt="Ad" class="ad-image" />
+          <ul class="ad-notes">
+            <li>We respond within 24 hours</li>
+            <li>NDA available on request</li>
+          </ul>
+          -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- CONTACT SECTION END -->
+
+  <div class="splitter5"></div>
+
+  <!-- Footer Start -->
+  <div class="footer">
+    <div class="container">
+      <div class="list-item">
+        <div class="info">
+          <!-- Footer Logo or Name -->
+          <a href="#" class="logo" style="display:inline-flex;align-items:center;">
+            <img src="./img/Wild-Rose-Devs-Logo.jpg" alt="Wild Rose Devs Logo"
+              style="max-height:20vh;margin-right:20vh;">
+          </a>
+          <p>© 2025 Wild Rose Devs. All Rights Reserved.</p>
+        </div>
+        <div class="list">
+          <h3>Projects</h3>
+          <ul>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#Our Work">Our Work</a></li>
+            <li><a href="#our-team">Our Team</a></li>
+          </ul>
+        </div>
+        <div class="list">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#Contact Section">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="list">
+          <h3>Follow Us</h3>
+          <ul class="media">
+            <li>
+              <a href="https://www.linkedin.com/company/wildrosedevs" target="_blank">
+                <i class="fab fa-linkedin" style="margin-right:5px;"></i>LinkedIn
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/WildRoseDevs" target="_blank">
+                <i class="fab fa-github" style="margin-right:5px;"></i>GitHub
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Footer End -->
+
+  <script src="script.js"></script>
+  <script src="server.js"></script>
 </body>
 </html>
