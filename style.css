@@ -321,11 +321,11 @@ canvas {
 }
 
 .hero .buttons a.donate {
-    background-color: #ed272a;
+    background-color: #0561cd;
 }
 
 .hero .buttons a.donate:hover {
-    background-color: #b8001c;
+    background-color: #0954a9;
 }
 
 @media (max-width: 991px) {
