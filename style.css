@@ -281,6 +281,7 @@ canvas {
 .hero-content {
     position: relative;
     z-index: 2;
+    color: #000000;
     margin-top: 100px;
 }
 
