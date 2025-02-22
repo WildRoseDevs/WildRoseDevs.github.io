@@ -281,7 +281,6 @@ canvas {
 .hero-content {
     position: relative;
     z-index: 2;
-    color: #000000;
     margin-top: 100px;
 }
 
@@ -289,7 +288,7 @@ canvas {
     font-weight: 700;
     font-size: 4rem;
     line-height: 1.1;
-    color: #fff;
+    color: #000000;
     margin: 0;
     padding: 0;
 }
@@ -298,7 +297,7 @@ canvas {
     font-weight: 400;
     font-size: 1.5rem;
     line-height: 1.1;
-    color: #fff;
+    color: #000000;
     margin-top: 20px;
 }
 

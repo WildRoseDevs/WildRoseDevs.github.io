@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (canvas) {
       const ctx = canvas.getContext('2d');
       let width, height;
-      const POINTS_COUNT = 200;
+      const POINTS_COUNT = 150;
       const MAX_DISTANCE = 220;
       const VELOCITY_SCALE = 0.0005;
       const BOUNCE_FACTOR = 0.06;
@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const dist = Math.sqrt(dx * dx + dy * dy);
             if (dist < MAX_DISTANCE) {
               const alpha = 1 - dist / MAX_DISTANCE;
-              ctx.strokeStyle = `rgba(255,0,0,${alpha * 0.5})`;
+              ctx.strokeStyle = `rgba(235,11,77,0.8)`;
               ctx.beginPath();
               ctx.moveTo(points[i].x, points[i].y);
               ctx.lineTo(points[j].x, points[j].y);
