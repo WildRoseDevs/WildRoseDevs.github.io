@@ -321,11 +321,11 @@ canvas {
 }
 
 .hero .buttons a.donate {
-    background-color: #0561cd;
+    background-color: #049216;
 }
 
 .hero .buttons a.donate:hover {
-    background-color: #0954a9;
+    background-color: #000000;
 }
 
 @media (max-width: 991px) {
@@ -1184,7 +1184,7 @@ select {
 }
 
 .contact-section button[type="submit"]:hover {
-    background-color: #d30505;
+    background-color: #000000;
 }
 
 /* END CONTACT SECTION*/ /*   IN ORDER */
