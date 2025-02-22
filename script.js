@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (canvas) {
       const ctx = canvas.getContext('2d');
       let width, height;
-      const POINTS_COUNT = 80;
+      const POINTS_COUNT = 20;
       const MAX_DISTANCE = 300;
       const VELOCITY_SCALE = 0.0005;
       const BOUNCE_FACTOR = 0.006;
