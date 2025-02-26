@@ -316,18 +316,19 @@
 
   <!-- CONTACT SECTION START -->
   <section class="contact-section" id="Contact Section">
+    <!-- Full-width background for canvas animation -->
+    <div class="contact-background">
+      <canvas id="canvas"></canvas>
+    </div>
+
+    <!-- Foreground contact container -->
     <div class="contact-container">
       <h2 class="ContactHeader">Let's Create Something Remarkable Together</h2>
       <p>Let’s discuss how we can bring your vision to life. Connect with us.</p>
 
       <div class="contact-content">
-        <!-- Left Column: Form -->
-        <!--
-        <canvas id="canvas"></canvas>
-        -->
         <div class="form-column">
           <form action="/contact" method="POST" enctype="multipart/form-data">
-            <!-- Row 1: Name & Email -->
             <div class="contact-row">
               <div class="form-group">
                 <label for="name">Name:</label>
@@ -338,7 +339,6 @@
                 <input type="email" id="email" name="Email" placeholder="Your Email" />
               </div>
             </div>
-            <!-- Row 2: Phone & Project Name -->
             <div class="contact-row">
               <div class="form-group">
                 <label for="phone">Phone Number:</label>
@@ -349,12 +349,10 @@
                 <input type="text" id="project-name" name="Project Name" placeholder="Your Project Name" />
               </div>
             </div>
-            <!-- Describe your idea -->
             <div class="form-group">
               <label for="idea">Describe your idea:</label>
               <textarea id="idea" name="Idea" rows="4" placeholder="Describe your idea here..."></textarea>
             </div>
-            <!-- Row 3: Budget & How did you hear about us? -->
             <div class="contact-row">
               <div class="form-group">
                 <label for="budget">What is your budget?</label>
@@ -383,20 +381,12 @@
             <button type="submit">SEND</button>
           </form>
         </div>
-        <!-- Right Column: (optional for image/notes) -->
-        <div class="ad-column">
-          <!-- Example usage 
-          <img src="img/contact-ad.jpg" alt="Ad" class="ad-image" />
-          <ul class="ad-notes">
-            <li>We respond within 24 hours</li>
-            <li>NDA available on request</li>
-          </ul>
-          -->
-        </div>
       </div>
     </div>
   </section>
   <!-- CONTACT SECTION END -->
+
+
 
   <div class="splitter5"></div>
 
@@ -452,4 +442,5 @@
   <script src="script.js"></script>
   <script src="server.js"></script>
 </body>
+
 </html>
