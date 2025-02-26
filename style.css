@@ -413,13 +413,6 @@ a {
 }
 /* End Landing */
 
-/* Start article */ /*   IN ORDER */
-.article {
-    padding-top: 100px;
-    padding-bottom: 100px;
-    position: relative;
-}
-
 /* Updated header styles */
 .main-title {
     text-align: left; /* Align text to the left */
@@ -429,76 +422,92 @@ a {
     border: none; /* Remove the surrounding box */
 }
 
-/* Remove dots if they were added via pseudo-elements */
 .main-title::before,
 .main-title::after {
     display: none;
 }
 
-/* Remove container restrictions */
-.article .container {
+/* Start Why Work With Us Section */
+.why-work-section {
+    padding: 100px 0;
+    background-color: var(--section-color);
+    text-align: center;
+}
+
+/* Container for the Glass Panels */
+.why-work-section .container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 40px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+    max-width: 1000px;
+    margin: auto;
 }
 
-/* Article Box Styling */
-.article .box {
-    box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
-    background-color: white;
-    border-radius: 6px;
-    overflow: hidden;
+/* Glass Effect for Boxes */
+.why-work-section .box {
+    background: #fff;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.article .box:hover {
-    transform: translateY(-10px);
-    /* background-color: #61adff;*/
-    box-shadow: 0 2px 15px rgb(0 0 0 / 20%);
+.why-work-section .box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-.article .box img {
-    max-width: 100%;
-    width: 100%;
-    height: 150px;
-}
-
-.article .box .content {
-    padding: 20px;
-}
-
-.article .box .content h3 {
-    margin: 0;
-}
-
-.article .box .content p {
-    margin: 10px 0 0 0;
-    line-height: 1.5;
-    color: #777;
-}
-
-.article .box .info {
-    padding: 20px;
-    border-top: 1px solid #e6e6e7;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.article .box .info a {
-    color: var(--main-color);
+/* Text Styling */
+.why-work-section .box h3 {
+    font-size: 20px;
     font-weight: bold;
+    color: #000;
 }
 
-.article .box .info i {
-    color: var(--main-color);
+.why-work-section .box p {
+    font-size: 16px;
+    color: #333;
 }
 
-.article .box:hover .info i {
-    animation: move-arrow 0.6s linear infinite;
+/* Centering the Call-to-Action Button */
+.why-work-section .cta {
+    margin-top: 40px;
+    text-align: center;
 }
 
-/* End article */ /*   IN ORDER */
+.why-work-section .cta-button {
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    font-size: 18px;
+    padding: 12px 25px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.why-work-section .cta-button:hover {
+    background-color: var(--btn-hover-color);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 900px) {
+    .why-work-section .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .why-work-section .container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+/* End Why Work With Us? */ /*   IN ORDER */
 
 .splitter3 {
     width: 100%;
@@ -508,81 +517,171 @@ a {
     display: block;
 }
 
-/* Start gallery */ /*   IN ORDER */
-.gallery {
-    padding-top: 100px;
-    padding-bottom: 100px;
-    position: relative;
-    background-color: var(--section-color);
-}
-.gallery .container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 40px;
-}
-.gallery .box {
-    padding: 15px;
-    background-color: white;
-    box-shadow: 0px 12px 20px 0px rgb(0 0 0 / 13%),
-        0px 2px 4px 0px rgb(0 0 0 / 12%);
-}
-.gallery .box .image {
-    position: relative;
-    width: 100%;
-    padding-top: 100%; /* Forces a 1:1 square aspect ratio */
-    overflow: hidden;
-}
-.gallery .box .image::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 0.2);
-    width: 0;
-    height: 0;
-    opacity: 0;
-    z-index: 2;
+/* Start Our Difference Section */
+.our-difference {
+    background-color: #f5f5f5;
+    padding: 80px 0;
+    text-align: center;
 }
 
-.gallery .box .image .visit-btn {
+.our-difference .container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.our-difference .difference-box {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid black;
+}
+
+.our-difference .impact-box {
+    background-color: #fce4e4;
+    border: 2px solid var(--main-color);
+}
+
+.section-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.our-difference p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+    text-align: left;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .our-difference .container {
+        padding: 0 20px;
+    }
+
+    .our-difference .difference-box {
+        padding: 20px;
+    }
+}
+/* End Our Difference Section */
+
+/* Our Work Section - Full Width */
+.gallery {
+    padding: 50px 0;
+    background-color: #f5f5f5;
+    text-align: center;
+    width: 100vw;
+    max-width: 100%;
+}
+
+/* Full-screen balanced grid */
+.gallery-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    grid-template-rows: auto auto; /* Two stacked rows */
+    gap: 20px;
+    width: 100vw;
+    height: auto;
+    padding: 0;
+    margin: 0;
+}
+
+/* Ensure gallery items are properly sized and positioned */
+.gallery-item {
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 95%; /* Keep images inside their columns */
+    height: 100%;
+}
+
+/* Left Column (Stacked & Offset) */
+.left-top {
+    grid-column: 1;
+    grid-row: 1;
+    height: 47vh;
+    margin-left: 0;
+}
+
+.left-bottom {
+    grid-column: 1;
+    grid-row: 2;
+    height: 47vh;
+    margin-left: 0;
+    margin-top: -20vh; /* Bring it upwards */
+}
+
+/* Right Column (Stacked, Starts Lower) */
+.right-top {
+    grid-column: 2;
+    grid-row: 1;
+    height: 47vh;
+    margin-right: 0;
+    margin-top: 20vh; /* Shift this image down */
+}
+
+.right-bottom {
+    grid-column: 2;
+    grid-row: 2;
+    height: 47vh;
+    margin-right: 0;
+}
+
+/* Make sure images fill their sections without stretching */
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+/* Visit button styling */
+.visit-btn {
     position: absolute;
-    bottom: 20px;
+    bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
     background-color: rgba(0, 0, 0, 0.7);
-    color: #fff;
-    padding: 10px 20px;
+    color: white;
+    padding: 8px 15px;
     border-radius: 5px;
     text-decoration: none;
     opacity: 0;
     transition: opacity 0.3s ease;
-    z-index: 3;
 }
 
-.gallery .box .image:hover .visit-btn {
+.gallery-item:hover .visit-btn {
     opacity: 1;
 }
 
-.gallery .box .image:hover::before {
-    animation: flashing 0.7s;
+/* Discover More Button */
+.discover-more {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: 2px solid black;
+    background: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-.gallery .box .image img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    max-width: 100%;
-    object-fit: fill;
-    transition: 0.3s;
+.discover-more:hover {
+    background-color: black;
+    color: white;
 }
-
-.gallery .box .image:hover img {
-    transform: rotate(5deg) scale(1.1);
-}
-/* End gallery */ /*   IN ORDER */
+/* End Our Work */ /*   IN ORDER */
 
 .splitter2 {
     width: 100%;
@@ -620,6 +719,11 @@ a {
 /* Container for the team cards */
 .our-team .container {
     display: grid;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 50%;
+    margin: auto;
+    align-items: stretch;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 40px;
 }
