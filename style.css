@@ -628,6 +628,7 @@ a {
     grid-row: 1;
     height: 47vh;
     margin-right: 0;
+    margin-left: auto;
     margin-top: 20vh; /* Shift this image down */
 }
 
@@ -636,6 +637,7 @@ a {
     grid-row: 2;
     height: 47vh;
     margin-right: 0;
+    margin-left: auto;
 }
 
 /* Make sure images fill their sections without stretching */
@@ -666,20 +668,19 @@ a {
 
 /* Discover More Button */
 .discover-more {
-    margin-top: 20px;
-    padding: 10px 20px;
+    margin-top: 30px;
+    padding: 20px 40px;
     border: 2px solid black;
-    background: white;
-    font-size: 18px;
+    background: black;
+    font-size: 30px;
+    color: #fff;
     font-weight: bold;
     cursor: pointer;
-    border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
 .discover-more:hover {
-    background-color: black;
-    color: white;
+    background-color: var(--btn-color);
 }
 /* End Our Work */ /*   IN ORDER */
 
