@@ -182,15 +182,6 @@ a {
     left: 0;
 }
 
-.header .main-nav > li:last-child > a {
-    color: var(--main-color) !important;
-    font-weight: bold;
-}
-
-.header .main-nav > li:last-child > a:hover {
-    background-color: transparent;
-}
-
 .header .mega-menu {
     position: absolute;
     width: 100%;
