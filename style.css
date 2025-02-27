@@ -106,7 +106,7 @@ a {
 
 /* Start header */
 .header {
-    background-color: #fff;
+    background-color: var(--section-color);
     -webkit-box-shadow: 0 0 10px #ddd;
     -moz-box-shadow: 0 0 10px #ddd;
     box-shadow: 0 0 10px #ddd;
@@ -180,6 +180,15 @@ a {
 }
 .header .main-nav > li > a:hover::before {
     left: 0;
+}
+
+.header .main-nav > li:last-child > a {
+    color: var(--main-color) !important;
+    font-weight: bold;
+}
+
+.header .main-nav > li:last-child > a:hover {
+    background-color: transparent;
 }
 
 .header .mega-menu {
