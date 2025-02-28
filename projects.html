@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Company Profile</title>
     <link rel="stylesheet" href="normalize.css" />
-    <link rel="stylesheet" href="our-work.css" />
+    <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="all.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -83,83 +83,18 @@
     <!-- Scroll to top button -->
     <button id="scroll-up" onclick="topScroll()"><i class="fa-solid fa-angles-up"></i></button>
 
-    <div class="splitter1"></div>
 
-    <!-- CONTACT SECTION START -->
-    <section class="contact-section" id="Contact Section">
-        <!-- Full-width background for canvas animation -->
-        <div class="contact-background">
-            <canvas id="canvas"></canvas>
+    <h2 class="our-work-title">OUR WORK</h2>
+    <div class="projects-container">
+        <div class="project">
+            <div class="img-square"><img src="your-image.jpg" alt="Project Image"></div>
+            <div class="company-info"><strong>Company Name</strong>What they do bla bla bla</div>
         </div>
-
-        <!-- Foreground contact container -->
-        <div class="contact-container">
-            <h2 class="ContactHeader">Let's Create Something Remarkable Together</h2>
-            <p>Let’s discuss how we can bring your vision to life. Connect with us.</p>
-
-            <div class="contact-content">
-                <div class="form-column">
-                    <form action="/contact" method="POST" enctype="multipart/form-data">
-                        <div class="contact-row">
-                            <div class="form-group">
-                                <label for="name">Name:</label>
-                                <input type="text" id="name" name="Name" placeholder="Your Name" />
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email:</label>
-                                <input type="email" id="email" name="Email" placeholder="Your Email" />
-                            </div>
-                        </div>
-                        <div class="contact-row">
-                            <div class="form-group">
-                                <label for="phone">Phone Number:</label>
-                                <input type="tel" id="phone" name="Phone" placeholder="Your Phone Number" />
-                            </div>
-                            <div class="form-group">
-                                <label for="project-name">Project Name:</label>
-                                <input type="text" id="project-name" name="Project Name"
-                                    placeholder="Your Project Name" />
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="idea">Describe your idea:</label>
-                            <textarea id="idea" name="Idea" rows="4"
-                                placeholder="Describe your idea here..."></textarea>
-                        </div>
-                        <div class="contact-row">
-                            <div class="form-group">
-                                <label for="budget">What is your budget?</label>
-                                <select id="budget" name="Budget">
-                                    <option value="">Pick Option</option>
-                                    <option value="500-1000">$500 - $1000</option>
-                                    <option value="1000-2000">$1000 - $2000</option>
-                                    <option value="2000-5000">$2000 - $5000</option>
-                                    <option value="5000+">$5000+</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="hear-about">How did you hear about us?</label>
-                                <select id="hear-about" name="Heard About Us">
-                                    <option value="">Pick Option</option>
-                                    <option value="google">Google</option>
-                                    <option value="social">Social Media</option>
-                                    <option value="friend">Friend/Referral</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="files">Drop files (PDF, Word, etc.):</label>
-                            <input type="file" id="files" name="Files" multiple />
-                        </div>
-                        <button type="submit">SEND</button>
-                    </form>
-                </div>
-            </div>
+        <div class="project">
+            <div class="img-square"><img src="your-image.jpg" alt="Project Image"></div>
+            <div class="company-info"><strong>Company Name</strong>What they do bla bla bla</div>
         </div>
-    </section>
-    <!-- CONTACT SECTION END -->
-
-    <div class="splitter2"></div>
+    </div>
 
     <div class="quote">"Websites promote you 24/7: No employee will do that." - Paul Cookson</div>
     <div class="contact-box">contact</div>
