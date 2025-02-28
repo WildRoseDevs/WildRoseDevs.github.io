@@ -269,7 +269,7 @@ a {
 }
 
 .our-work-title {
-    font-size: 4rem;
+    font-size: 3rem;
     font-family: 'Times New Roman', Times, serif !important;
     padding-left: 20vh !important;
     font-weight: bold;
@@ -310,12 +310,12 @@ a {
 }
 
 .company-info {
-    text-align: left;
+    align-items: left;
     font-size: 0.95rem;
 }
 .company-info strong {
+    align-items: left;
     display: block;
-    text-align: left;
     margin-bottom: 3px;
 }
 
