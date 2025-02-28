@@ -269,9 +269,9 @@ a {
 }
 
 .our-work-title {
-    font-size: 2rem;
+    font-size: 5rem;
     font-family: 'Times New Roman', Times, serif !important;
-    margin-left: auto;
+    margin-left: 20vh;
     font-weight: bold;
     margin: 30px 20px;
 }
