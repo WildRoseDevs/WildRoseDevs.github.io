@@ -311,10 +311,12 @@ a {
 
 .company-info {
     align-items: left;
+    justify-content: left;
     font-size: 0.95rem;
 }
 .company-info strong {
     align-items: left;
+    justify-content: left;
     display: block;
     margin-bottom: 3px;
 }
