@@ -270,6 +270,8 @@ a {
 
 .our-work-title {
     font-size: 2rem;
+    font-family: 'Times New Roman', Times, serif !important;
+    margin-left: auto;
     font-weight: bold;
     margin: 30px 20px;
 }
@@ -291,8 +293,8 @@ a {
 }
 
 .img-square {
-    width: 270px;
-    height: 270px;
+    width: 350px;
+    height: 300px;
     border: 2px solid #000;
     background-color: #eee;
     margin-bottom: 10px;
@@ -308,11 +310,12 @@ a {
 }
 
 .company-info {
-    text-align: center;
+    text-align: left;
     font-size: 0.95rem;
 }
 .company-info strong {
     display: block;
+    text-align: left;
     margin-bottom: 3px;
 }
 
