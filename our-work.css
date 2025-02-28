@@ -271,7 +271,7 @@ a {
 .our-work-title {
     font-size: 3rem;
     font-family: 'Times New Roman', Times, serif !important;
-    padding-left: 20vh !important;
+    padding-left: 10vh !important;
     font-weight: bold;
     margin: 30px 20px;
 }
@@ -310,13 +310,13 @@ a {
 }
 
 .company-info {
-    align-items: left;
-    justify-content: left;
+    align-items: left !important;
+    justify-content: left !important;
     font-size: 0.95rem;
 }
 .company-info strong {
-    align-items: left;
-    justify-content: left;
+    align-items: left !important;
+    justify-content: left !important;
     display: block;
     margin-bottom: 3px;
 }
