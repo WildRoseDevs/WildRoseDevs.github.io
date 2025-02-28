@@ -8,6 +8,15 @@
 }
 
 /* End Variables */
+
+.splitter {
+    width: 100%;
+    height: 20px; /* Adjust height as needed */
+    background: white; /* White separator */
+    margin: 10px 0; /* Add spacing */
+    display: block;
+}
+
 /* Start Gloable  */
 * {
     -webkit-box-sizing: border-box;
