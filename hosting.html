@@ -168,64 +168,63 @@
 </body>
   </div> 
     </main>
+      
       <!-- FAQ Section -->
-      <div class="faq">
-        <h2>FAQ</h2>
-  
-        <div class="faq-item">
-          <button class="question">Which plan should I choose?</button>
-          <div class="answer">
-            <p>
-              It depends on your usage and requirements. Light is great for individuals, Core is ideal for small teams, and Elite is best for larger businesses.
-            </p>
-          </div>
-        </div>
-  
-        <div class="faq-item">
-          <button class="question">Can I try the premium plan for free?</button>
-          <div class="answer">
-            <p>
-              We offer a 14-day free trial for new users. No credit card is required to get started.
-            </p>
-          </div>
-        </div>
-  
-        <div class="faq-item">
-          <button class="question">Can I get a premium plan for free?</button>
-          <div class="answer">
-            <p>
-              We do not offer a completely free premium plan, but you can utilize the trial period to explore premium features before committing.
-            </p>
-          </div>
-        </div>
-  
-        <div class="faq-item">
-          <button class="question">What online payments are accepted?</button>
-          <div class="answer">
-            <p>
-              We accept major credit cards, PayPal, and wire transfers in select regions.
-            </p>
-          </div>
-        </div>
-  
-        <div class="faq-item">
-          <button class="question">Is there any discount for students and young entrepreneurs?</button>
-          <div class="answer">
-            <p>
-              Yes, we offer a 20% discount for verified students and startups under 2 years old.
-            </p>
-          </div>
-        </div>
-  
-        <div class="faq-item">
-          <button class="question">How do you ensure security of my website?</button>
-          <div class="answer">
-            <p>
-              We utilize end-to-end encryption, regular backups, and continuous security monitoring to protect your data.
-            </p>
-          </div>
+    <div class="faq">
+      <h2>FAQ</h2>
+
+      <div class="faq-item">
+        <button class="question">Which plan should I choose?</button>
+        <div class="answer">
+          <p>
+            It depends on your usage and requirements. Light is great for individuals, Core is ideal for small teams, and Elite is best for larger businesses.
+          </p>
         </div>
       </div>
+
+      <div class="faq-item">
+        <button class="question">Can I try the premium plan for free?</button>
+        <div class="answer">
+          <p>
+            We offer a 14-day free trial for new users. No credit card is required to get started.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="question">Can I get a premium plan for free?</button>
+        <div class="answer">
+          <p>
+            We do not offer a completely free premium plan, but you can utilize the trial period to explore premium features before committing.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="question">What online payments are accepted?</button>
+        <div class="answer">
+          <p>
+            We accept major credit cards, PayPal, and wire transfers in select regions.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="question">Is there any discount for students and young entrepreneurs?</button>
+        <div class="answer">
+          <p>
+            Yes, we offer a 20% discount for verified students and startups under 2 years old.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="question">How do you ensure security of my website?</button>
+        <div class="answer">
+          <p>
+            We utilize end-to-end encryption, regular backups, and continuous security monitoring to protect your data.
+          </p>
+    </div>
     <!-- Start Pricing Section
     <div class="pricing" id="pricing">
         <div class="dots dots-up"></div>
@@ -424,7 +423,24 @@
         </div>
     </div>
     <!-- Footer End -->
+      <!-- JavaScript for FAQ Accordion -->
+  <script>
+    const faqItems = document.querySelectorAll('.faq-item');
 
+    faqItems.forEach(item => {
+      const questionBtn = item.querySelector('.question');
+      questionBtn.addEventListener('click', () => {
+        // Close any other open FAQ items (optional behavior):
+        faqItems.forEach(i => {
+          if (i !== item) {
+            i.classList.remove('active');
+          }
+        });
+        // Toggle current item
+        item.classList.toggle('active');
+      });
+    });
+  </script>
     <script src="script.js"></script>
     <script src="server.js"></script>
 </body>
