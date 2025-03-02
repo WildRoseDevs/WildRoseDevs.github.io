@@ -1,0 +1,102 @@
+/* Outer Container */
+    .outer-container {
+      max-width: 1000px; /* Adjust width as needed */
+      margin: 20px auto; /* Center and add top/bottom margin */
+      border: 2px solid #000; /* Example border */
+      padding: 20px;          /* Spacing inside the outer container */
+      background: #f9f9f9;    /* Light background color (optional) */
+    }
+    
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #333;
+      background: #fff;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 40px 20px;
+      text-align: left;
+    
+    }
+
+
+    /* Header / Title */
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .subheading {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 40px;
+    }
+
+    /* Plans Wrapper */
+    .plans {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    /* Individual Plan */
+    .plan {
+      border: 1px solid #000;
+      padding: 20px;
+      width: 30%;
+      box-sizing: border-box;
+      position: relative; /* for the Recommended badge */
+    }
+
+    .plan h2 {
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      top: 40px;
+    }
+
+    .subtitle {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 15px;
+    }
+
+    .price {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    /* Bullet Points */
+    .plan ul {
+      list-style: disc;
+      text-align: left;
+      padding-left: 20px;
+      line-height: 1.5;
+    }
+
+    .plan ul li {
+      margin-bottom: 5px;
+    }
+
+    /* "Recommended" Badge */
+    .recommended-badge {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background-color: #f00;
+      color: #fff;
+      padding: 4px 8px;
+      font-size: 0.8rem;
+      border-radius: 3px;
+      text-transform: uppercase;
+    }
