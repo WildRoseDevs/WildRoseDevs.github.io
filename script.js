@@ -104,6 +104,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     animate(); // Start animation
+// Hosting js for faq arrow
+    <script>
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+      const questionBtn = item.querySelector('.question');
+      questionBtn.addEventListener('click', () => {
+        // Close any other open FAQ items (optional behavior):
+        faqItems.forEach(i => {
+          if (i !== item) {
+            i.classList.remove('active');
+          }
+        });
+        // Toggle current item
+        item.classList.toggle('active');
+      });
+    });
+  </script>
 
     // Scroll to Top Button
     const scrollUpButton = document.getElementById("scroll-up");
