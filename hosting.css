@@ -582,7 +582,386 @@ a {
     content: "-";
   }
 
+  CONTACT SECTION STYLES                                /*   IN ORDER */
+/*************************************/
+/* Container centered with max-width */
+/* Container styling */
+.contact-section {
+    position: relative;
+    width: 100%;
+    padding: 50px 0;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
 
-</style>
-</head>
+/* Updated header styles */
+.ContactHeader {
+    text-align: center; /* Align text to the left */
+    font-size: 40px;
+    font-weight: bold;
+    margin-left: 20px; /* Adjust based on spacing */
+    border: none; /* Remove the surrounding box */
+}
+
+/* Remove dots if they were added via pseudo-elements */
+.ContactHeader::before,
+.ContactHeader::after {
+    display: none;
+}
+
+/* Labels and input fields */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: #f2f2f2; /* Light grey background for the inputs */
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+/* Dropdown styling (if applicable) */
+select {
+    width: 100%;
+    padding: 10px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+.contact-container {
+    position: relative;
+    z-index: 3;
+    background: rgba(232, 232, 232, 0.95);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Center the main heading */
+.contact-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Wrapper for form + image columns */
+.contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Left Column (Form) */
+.form-column {
+    flex: 1 1 500px;
+    min-width: 280px; /* ensures the form isn't too narrow on smaller screens */
+}
+
+/* Right Column (Ad / Image) 
+  .ad-column {
+    flex: 1 1 300px;
+    min-width: 280px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;   /* Center content horizontally */
+/* justify-content: flex-start; */
+/* gap: 10px; /* space between image and list */
+
+/* Image styling */
+.ad-image {
+    width: 100%;
+    max-width: 300px; /* optional: limit max width if you want */
+    height: auto;
+    border-radius: 6px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Notes under the image */
+/* .ad-notes {
+    list-style: disc inside;
+    line-height: 1.6;
+    margin: 0; 
+    padding: 0;
+  } */
+
+/* Rows inside the form for side-by-side fields */
+.contact-row {
+    display: flex;
+    gap: 10px;
+}
+
+/* Form groups for labels + inputs */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex: 1;
+}
+
+/* Labels & Inputs */
+.form-group label {
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group textarea,
+.form-group select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font: inherit;
+    width: 100%;
+}
+
+/* File input can be styled minimally (browsers differ) */
+.form-group input[type="file"] {
+    font: inherit;
+    border: none;
+    padding: 5px 0;
+}
+
+/* Submit Button */
+.contact-section button[type="submit"] {
+    width: 120px;
+    display: block; /* Make the button a block element */
+    margin: 15px auto; /* Center horizontally by auto left/right margin */
+    padding: 15px;
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font: inherit;
+    font-weight: bold;
+}
+
+.contact-section button[type="submit"]:hover {
+    background-color: var(--main-color);
+}
+/* END CONTACT SECTION*/ /*   IN ORDER */
+
+.splitter5 {
+    width: 100%;
+    height: 20px; /* Adjust height as needed */
+    background: rgb(255, 255, 255); /* White separator */
+    margin: 1px 0; /* Add spacing */
+    display: block;
+}
+
+/* Start faqs */ /*   OUT OF ORDER */
+.faqs {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    position: relative;
+    /* background-color: var(--section-color); */
+}
+.faqs .container .section {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.faqs .container .section .faq {
+    max-width: 700px;
+    margin-top: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #c1c1c1;
+    cursor: pointer;
+}
+.faqs .container .section .faq .question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.faqs .container .section .faq .question h3 {
+    font-size: 25px;
+    margin-right: 20px;
+}
+.faqs .container .section .faq .question i {
+    color: var(--main-color);
+    transition: transform 0.5s;
+}
+.faqs .container .section .faq.active .question i {
+    transform: rotate(180deg);
+}
+.faqs .container .section .faq .answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1.4s ease;
+}
+.faqs .container .section .faq .answer p {
+    margin-top: 0;
+    line-height: 1.6;
+    font-size: 17px;
+}
+.faqs .container .section .faq.active .answer {
+    max-height: 300px;
+    animation: fade 1s ease-in-out;
+}
+
+/* End faqs */
+
+/* Start footer */ /*   IN ORDER */
+.footer {
+    padding-top: 100px;
+    padding-bottom: 10px;
+    position: relative;
+    background-color: var(--section-color);
+}
+.footer .container {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+}
+.footer .container .list-item {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 80px;
+    padding-bottom: 20px;
+}
+.footer .container .list-item .info a {
+    color: var(--main-color);
+    font-size: 30px;
+    font-weight: bold;
+}
+.footer .container .list-item .info p {
+    font-size: 16px;
+}
+.footer .container .list-item .list h3 {
+    font-size: 20px;
+    font-weight: bold;
+}
+.footer .container .list-item .list ul li {
+    line-height: 2;
+}
+.footer .container .list-item .list ul.media {
+    font-size: 30px;
+    display: flex;
+    gap: 10px;
+}
+.footer .container .list-item .list a {
+    color: #000000;
+}
+.footer .container .list-item .list a:hover {
+    color: var(--main-color);
+}
+.footer .container .copyright {
+    border-top: 1px solid #ffffff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+@media (max-width: 991px) {
+    .footer .container .list-item {
+        text-align: center;
+    }
+    .footer .container .list-item .list ul.media {
+        justify-content: center;
+        align-items: center;
+    }
+}
+/* end footer */
+
+/* Start animation */
+@keyframes up-and-down {
+    0%,
+    100% {
+        top: 0;
+    }
+    50% {
+        top: -20px;
+    }
+}
+@keyframes bouncing {
+    0%,
+    10%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+    40%,
+    60% {
+        transform: translateY(-5px);
+    }
+}
+@keyframes left-move {
+    50% {
+        left: 0;
+        width: 12px;
+        height: 12px;
+    }
+    100% {
+        left: 0;
+        width: 50%;
+        height: 100%;
+        border-radius: 0;
+    }
+}
+@keyframes right-move {
+    50% {
+        right: 0;
+        width: 12px;
+        height: 12px;
+    }
+    100% {
+        right: 0;
+        width: 50%;
+        height: 100%;
+        border-radius: 0;
+    }
+}
+@keyframes move-arrow {
+    100% {
+        transform: translateX(10px);
+    }
+}
+@keyframes flashing {
+    0%,
+    40% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        width: 200%;
+        height: 200%;
+    }
+}
+@keyframes fade {
+    form {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
 
