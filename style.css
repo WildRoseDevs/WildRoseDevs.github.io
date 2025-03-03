@@ -2,7 +2,7 @@
 :root {
     --main-color: #eb0b4d;
     --main-color-alt: #000000;
-    --section-color: #FFF;
+    --section-color: #ffffff;
     --btn-color: #eb0b4d;
     --btn-hover-color: #bd1e48;
 }
@@ -175,7 +175,7 @@ a {
     transition: 0.3s;
 }
 .header .main-nav > li > a:hover {
-    background-color: #fafafa;
+    background-color: #ffffff;
     color: var(--main-color);
 }
 .header .main-nav > li > a:hover::before {
