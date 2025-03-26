@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Our Team - Wireframe Replica</title>
+    <style>
+        /* ------------------------------------------------------------------
+       RESET & BASE
+    ------------------------------------------------------------------ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Times New Roman", Times, serif;
+            /* Matches wireframe text style */
+            color: #333;
+            background: #fff;
+            position: relative;
+            min-width: 1200px;
+            /* The wireframe is wide, so we fix a min width */
+        }
+
+        a {
+            color: #000;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* ------------------------------------------------------------------
+       NAV BAR (Placeholder)
+    ------------------------------------------------------------------ */
+        header {
+            width: 100%;
+            height: 60px;
+            background: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* ------------------------------------------------------------------
+       HERO SECTION
+       Left: Heading, paragraphs, Flag centered under subtext
+       Right: Map top-right
+    ------------------------------------------------------------------ */
+        .hero-container {
+            width: 100%;
+            position: relative;
+            padding: 30px;
+            /* top/bottom padding */
+            border-bottom: 1px solid #ccc;
+        }
+
+        /* Large heading, left-aligned, 
+       wireframe shows "OUR REACH IS CANADA WIDE" bigger than subtext */
+        .hero-heading {
+            font-size: 2.2rem;
+            font-weight: normal;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .hero-subtext {
+            max-width: 650px;
+            font-size: 1rem;
+            line-height: 1.4;
+            margin-bottom: 10px;
+        }
+
+        .made-canadians {
+            font-size: 0.9rem;
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        /* The Map in top-right corner as an image, absolutely positioned */
+        .map-img {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            width: 200px;
+            /* wireframe’s approximate map size */
+            height: auto;
+        }
+
+        /* The Flag is an inline image placed below subtext, centered in wireframe,
+       but the wireframe says "MADE BY CANADIANS FOR CANADIANS" is also centered.
+       We'll replicate that by simply placing the flag before the "made by..." line.
+    */
+        .flag-img {
+            width: 120px;
+            /* approx size from wireframe (flag bigger than 80 px) */
+            height: auto;
+            margin-bottom: 5px;
+        }
+
+        /* ------------------------------------------------------------------
+       QUOTE LINE
+       "Technology is best..."
+    ------------------------------------------------------------------ */
+        .quote-line {
+            text-align: center;
+            font-size: 0.85rem;
+            font-style: italic;
+            margin: 10px 0 30px 0;
+        }
+
+        /* ------------------------------------------------------------------
+       MEET THE TEAM
+       2 tall boxes side by side
+       each with top "IMG OF PERSON" 
+       and bottom rectangle for name & position
+    ------------------------------------------------------------------ */
+        .team-section {
+            width: 100%;
+            padding: 20px 30px 40px 30px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .team-section h2 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .team-container {
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .team-box {
+            width: 200px;
+            height: 320px;
+            background: #eee;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .person-img {
+            flex: 1;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 0.9rem;
+        }
+
+        /* bottom rectangle for name/position w/ grey border */
+        .info-rect {
+            width: 90%;
+            height: 50px;
+            border: 2px solid #999;
+            background: #fff;
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .info-rect .team-name {
+            font-size: 0.85rem;
+            font-weight: bold;
+            color: #000;
+            margin-bottom: 2px;
+        }
+
+        .info-rect .team-position {
+            font-size: 0.75rem;
+            color: #777;
+        }
+
+        /* ------------------------------------------------------------------
+       FOOTER
+    ------------------------------------------------------------------ */
+        footer {
+            width: 100%;
+            height: 60px;
+            background: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAV BAR -->
+    <header>
+        NAV BAR
+    </header>
+
+    <!-- HERO SECTION -->
+    <section style="
+position: relative; 
+width: 100%; 
+padding: 2rem 1rem; 
+border-bottom: 1px solid #ccc;
+font-family: 'Times New Roman', serif;
+box-sizing: border-box;
+">
+
+        <!-- Dotted map top-right -->
+        <div style="
+  position: absolute; 
+  top: 2rem; 
+  right: 2rem; 
+  width: 150px; 
+  height: 100px; 
+  border: 2px dashed #999; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  color: #666; 
+  font-size: 0.8rem;
+">
+            [Map of Canada]
+        </div>
+
+        <!-- Large Heading, centered -->
+        <h1 style="
+  font-size: 2rem; 
+  margin-bottom: 1rem; 
+  text-align: center; 
+  text-transform: uppercase;
+  font-weight: normal;
+">
+            OUR REACH IS CANADA WIDE
+        </h1>
+
+        <!-- Subtext, also centered -->
+        <p style="
+  max-width: 600px; 
+  margin: 0 auto 1rem auto; 
+  text-align: center; 
+  font-size: 1rem; 
+  line-height: 1.4;
+">
+            Finding the right digital solutions partner can be a challenge—we get it.
+            At <strong>Wild Rose Devs</strong>, we go beyond just building websites;
+            we provide everything you need to establish, protect, and grow your online presence.
+        </p>
+
+        <!-- Black box for the flag, centered (wireframe style) -->
+        <div style="
+  width: 80px; 
+  height: 50px; 
+  background: #000; 
+  margin: 0 auto 1rem auto; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  color: #fff; 
+  font-size: 0.7rem;
+">
+            [Flag]
+        </div>
+
+        <!-- Italic line, also centered -->
+        <p style="
+  text-align: center; 
+  font-style: italic; 
+  font-size: 0.85rem;
+">
+            MADE BY CANADIANS FOR CANADIANS
+        </p>
+    </section>
+
+
+    <!-- TECH IMAGE + WHO ARE WE SECTION -->
+    <section style="
+display: flex;
+align-items: flex-start;
+justify-content: center;
+gap: 2rem;
+padding: 2rem;
+border-bottom: 1px solid #ccc;
+font-family: 'Times New Roman', Times, serif;
+">
+
+        <!-- LEFT: Pink bounding box behind gray "IMG OF TECH" -->
+        <div style="
+  position: relative;
+  width: 320px;   /* Gray rectangle width */
+  height: 400px;  /* Gray rectangle height */
+">
+            <!-- Pink box: extends left/right but not above/below -->
+            <div style="
+    position: absolute;
+    top: 0;          /* no extra pink above */
+    bottom: 0;       /* no extra pink below */
+    left: -30px;     /* pink extends 30px on left side */
+    right: -30px;    /* pink extends 30px on right side */
+    background: #ffc0c0;
+    z-index: 1;
+  "></div>
+
+            <!-- Gray "IMG OF TECH" overlay -->
+            <div style="
+    position: relative;
+    z-index: 2;
+    width: 320px;
+    height: 400px;
+    background: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-size: 1.1rem;
+    font-style: italic;
+  ">
+                IMG OF TECH
+            </div>
+        </div>
+
+        <!-- RIGHT: WHO ARE WE box -->
+        <div style="
+  width: 320px; 
+  height: 400px; 
+  border: 2px solid #999; 
+  background: #eee; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: space-between; 
+  padding: 1.5rem;
+">
+            <!-- Heading + paragraphs -->
+            <div>
+                <h2 style="
+      font-size: 1.3rem; 
+      margin-bottom: 0.75rem; 
+      text-transform: uppercase;
+      font-weight: normal;
+    ">
+                    WHO ARE WE
+                </h2>
+                <p style="
+      font-size: 1rem; 
+      line-height: 1.5; 
+      margin-bottom: 1rem;
+    ">
+                    “Wild Rose Devs” is a startup company founded in Alberta, Canada.
+                    We proudly serve businesses across Canada, helping them build secure,
+                    high-performing digital experiences.
+                </p>
+                <p style="
+      font-size: 1rem; 
+      line-height: 1.5;
+    ">
+                    At Wild Rose Devs, we value strong professional relationships
+                    and are committed to supporting our clients every step of the way.
+                    No matter where you are in Canada, we're here to help you grow
+                    and protect your online presence.
+                </p>
+            </div>
+
+            <!-- "Get a Quote" button -->
+            <button style="
+    align-self: flex-start; 
+    background: #e57373; 
+    color: #fff; 
+    border: none; 
+    font-size: 0.85rem; 
+    padding: 0.5rem 1rem; 
+    cursor: pointer;
+    margin-top: 1rem;
+  ">
+                Get a Quote
+            </button>
+        </div>
+    </section>
+
+
+    <!-- QUOTE LINE -->
+    <div class="quote-line">
+        “Technology is best when it brings people together.” — Matt Mullenweg
+    </div>
+
+    <!-- OUR MISSION SECTION -->
+    <section style="
+width: 100%;
+padding: 2rem 1rem;
+background: #ffd9d9;  /* pink background */
+border: 3px solid #ff8888; /* thicker red/pink border */
+box-sizing: border-box;
+margin-bottom: 2rem;
+display: flex;
+align-items: flex-start;
+justify-content: space-between;
+gap: 2rem;
+">
+
+        <!-- LEFT: MISSION HEADING -->
+        <div style="min-width: 180px; max-width: 250px;">
+            <h2 style="
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    font-weight: normal;
+    text-transform: uppercase;
+  ">
+                Our Mission
+            </h2>
+        </div>
+
+        <!-- RIGHT: MISSION TEXT -->
+        <div style="flex: 1; font-size: 1rem; line-height: 1.5; color: #333;">
+            System We are more than just a service provider—we are your
+            <strong>trusted partner and advisor</strong>, committed to your business’s success.
+            At <strong>Wild Rose Devs</strong>, we take this responsibility seriously, ensuring
+            <strong>clear communication</strong>, strategic planning, timely updates, and streamlined
+            <strong>processes</strong> that empower every project to reach its full potential.
+        </div>
+
+    </section>
+
+
+    <!-- WHAT WE DO SECTION -->
+    <section style="width:100%; padding:2rem; border-bottom:1px solid #ccc;">
+        <h2 style="
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      margin-left: 1rem;
+    ">
+            WHAT WE DO
+        </h2>
+        <div style="
+      width:27vh;
+      height:1px;
+      background:#666;
+      margin-left:1rem;
+      margin-bottom:2rem;
+    "></div>
+
+        <!-- 3 columns x 2 rows = 6 items, each with big "01" in grey, black heading, grey sample lines, black "View More" -->
+        <div style="
+      display:grid; 
+      grid-template-columns: repeat(3, 1fr);
+      gap:2rem;
+      max-width:1200px;
+      margin:0 auto;
+      text-align:center;
+    ">
+            <!-- 1 -->
+            <div>
+                <div style="font-size:48px; color:#aaa; margin-bottom:10px;">01</div>
+                <div style="
+          font-size:18px; 
+          color:#000; 
+          font-weight:bold; 
+          margin-bottom:10px;
+          text-transform: uppercase;
+        ">
+                    WEB DEVELOPMENT
+                </div>
+                <div style="
+          font-size:14px; 
+          color:#777; 
+          line-height:1.4; 
+          margin-bottom:10px;
+        ">
+                    Sample Sample<br>
+                    Sample Sample<br>
+                    Sample Sample<br>
+                    Sample Sample
+                </div>
+                <a href="#" style="
+          font-size:14px; 
+          color:#000;
+        ">View More</a>
+            </div>
+
+            <!-- 2 -->
+            <div>
+                <div style="font-size:48px; color:#aaa; margin-bottom:10px;">01</div>
+                <div style="
+          font-size:18px; 
+          color:#000; 
+          font-weight:bold; 
+          margin-bottom:10px;
+          text-transform: uppercase;
+        ">
+                    WEB DESIGN
+                </div>
+                <div style="
+          font-size:14px; 
+          color:#777; 
+          line-height:1.4; 
+          margin-bottom:10px;
+        ">
+                    Sample Sample<br>
+                    Sample Sample<br>
+                    Sample Sample<br>
+                    Sample Sample
+                </div>
+                <a href="#" style="
+          font-size:14px; 
+          color:#000;
+        ">View More</a>
+            </div>
+
+            <!-- 3 -->
+            <div>
+                <div style="font-size:48px; color:#aaa; margin-bottom:10px;">01</div>
+                <div style="
+          font-size:18px; 
+          color:#000; 
+          font-weight:bold; 
+          margin-bottom:10px;
+          text-transform: uppercase;
+        ">
+                    Digital Marketing
+                </div>
+                <div style="
+          font-size:14px; 
+          color:#777; 
+          line-height:1.4; 
+          margin-bottom:10px;
+        ">
+                    Sample Sample<br>
+                    Sample Sample<br>
+                    Sample Sample<br>
+                    Sample Sample
+                </div>
+                <a href="#" style="
+          font-size:14px; 
+          color:#000;
+        ">View More</a>
+            </div>
+
+            <!-- 4 -->
+            <div>
+                <div style="font-size:48px; color:#aaa; margin-bottom:10px;">01</div>
+                <div style="
+          font-size:18px; 
+          color:#000; 
+          font-weight:bold; 
+          margin-bottom:10px;
+          text-transform: uppercase;
+        ">
+                    Hosting
+                </div>
+                <div style="
+          font-size:14px; 
+          color:#777; 
+          line-height:1.4; 
+          margin-bottom:10px;
+        ">
+                    Sample Sample<br>
+                    Sample Sample<br>
+                    Sample Sample<br>
+                    Sample Sample
+                </div>
+                <a href="#" style="
+          font-size:14px; 
+          color:#000;
+        ">View More</a>
+            </div>
+
+            <!-- 5 -->
+            <div>
+                <div style="font-size:48px; color:#aaa; margin-bottom:10px;">01</div>
+                <div style="
+          font-size:18px; 
+          color:#000; 
+          font-weight:bold; 
+          margin-bottom:10px;
+          text-transform: uppercase;
+        ">
+                    CyberSecurity
+                </div>
+                <div style="
+          font-size:14px; 
+          color:#777; 
+          line-height:1.4; 
+          margin-bottom:10px;
+        ">
+                    Sample Sample<br>
+                    Sample Sample<br>
+                    Sample Sample<br>
+                    Sample Sample
+                </div>
+                <a href="#" style="
+          font-size:14px; 
+          color:#000;
+        ">View More</a>
+            </div>
+
+            <!-- 6 -->
+            <div>
+                <div style="font-size:48px; color:#aaa; margin-bottom:10px;">01</div>
+                <div style="
+          font-size:18px; 
+          color:#000; 
+          font-weight:bold; 
+          margin-bottom:10px;
+          text-transform: uppercase;
+        ">
+                    CyberSecuiry
+                </div>
+                <div style="
+          font-size:14px; 
+          color:#777; 
+          line-height:1.4; 
+          margin-bottom:10px;
+        ">
+                    Sample Sample<br>
+                    Sample Sample<br>
+                    Sample Sample<br>
+                    Sample Sample
+                </div>
+                <a href="#" style="
+          font-size:14px; 
+          color:#000;
+        ">View More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- MEET THE TEAM -->
+    <section class="team-section">
+        <h2>MEET THE TEAM</h2>
+        <div class="team-container">
+            <!-- Card 1 -->
+            <div class="team-box">
+                <div class="person-img">IMG OF PERSON</div>
+                <div class="info-rect">
+                    <div class="team-name">NOM ET PRÉNOM</div>
+                    <div class="team-position">POSITION</div>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="team-box">
+                <div class="person-img">IMG OF PERSON</div>
+                <div class="info-rect">
+                    <div class="team-name">NOM ET PRÉNOM</div>
+                    <div class="team-position">POSITION</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        FOOTER
+    </footer>
+
+</body>
+
+</html>

@@ -15,117 +15,75 @@
 
 <body>
   <!-- Start Header -->
-  <div class="header" id="header">
-    <div class="container">
-      <a href="#" class="logo">
-        <img src="./img/alberta-28548_1280.png" alt="Wild Rose Devs" style="max-height:60px;">
-      </a>
+  <header class="site-header">
+    <div class="container header-bar">
+      <div class="logo-block">
+        <img src="./img/logo.svg" alt="Wild Rose Devs Logo"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+        <div class="logo-fallback">
+          <div class="logo-top">WildRose</div>
+          <div class="logo-bottom">DEVS</div>
+        </div>
+      </div>
 
-      <ul class="main-nav">
+      <!-- Navigation -->
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="services.html">Services</a></li>
+        </ul>
+      </nav>
 
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="#">Services</a>
-          <!-- Start MegMenu -->
-          <div class="mega-menu">
-            <div class="image">
-              <img src="./img/Wild-Rose-Devs-Logo.jpg" alt="megmenu-image" />
-            </div>
-            <ul class="links">
-              <li>
-                <a href="web-development.html">
-                  <i class="far fa-building fa-fw"></i> Web Development
-                </a>
-              </li>
-              <li>
-                <a href="web-design.html">
-                  <i class="fa-regular fa-circle-question"></i> Web Design
-                </a>
-              </li>
-              <li>
-                <a href="digital-marketing.html">
-                  <i class="fas fa-server fa-fw"></i> Digital Marketing
-                </a>
-              </li>
-            </ul>
-            <ul class="links">
-              <li>
-                <a href="digital-marketing.html">
-                  <i class="fas fa-server fa-fw"></i> Digital Marketing
-                </a>
-              </li>
-              <li>
-                <a href="hosting.html">
-                  <i class="fas fa-server fa-fw"></i> Hosting
-                </a>
-              </li>
-              <li>
-                <a href="cybersecurity.html">
-                  <i class="fas fa-server fa-fw"></i> Cybersecurity
-                </a>
-              </li>
-              <li>
-                <a href="ongoing-support.html">
-                  <i class="fas fa-server fa-fw"></i> Ongoing Support
-                </a>
-              </li>
-            </ul>
-          </div>
-          <!-- End MegMenu -->
-        </li>
-        <li><a href="#">Meet the Team</a></li>
-        <li><a href="#Contact Section">Get in touch</a></li>
-      </ul>
+      <!-- CTA Button -->
+      <a href="#Contact Section" class="quote-btn">Get a Quote</a>
     </div>
-  </div>
-  <!-- End Header -->
+  </header>
 
-  <!-- Scroll to top button -->
-  <button id="scroll-up" onclick="topScroll()"><i class="fa-solid fa-angles-up"></i></button>
 
   <!-- Start Hero Section -->
   <section class="hero">
-    <div class="hero-content">
+    <div class="container hero-content">
       <h1>Built in Alberta, Made for Your Business</h1>
       <p>
-        At <strong>Wild Rose Devs</strong>, we craft custom web experiences that capture the unique essence of your brand. Since our inception, our passionate team has guided every project seamlessly from concept to launch.
+        At <strong>Wild Rose Devs</strong>, we craft custom web experiences that capture the unique essence
+        of your brand. Since our inception, our passionate team has guided every project seamlessly from concept to
+        launch.
       </p>
-      <!-- CTA Buttons -->
       <div class="buttons">
-        <a href="#projects">Get Started</a>
-        <a href="#Contact Section" class="donate">Contact Us</a>
+        <a href="#projects" class="btn primary">Get Started</a>
+        <a href="#Contact Section" class="btn secondary">Contact Us</a>
       </div>
     </div>
   </section>
-  <!-- End Hero Section -->
 
   <!-- Start Why Work With Us Section -->
   <div class="why-work-section" id="why-work-with-us">
     <h2 class="main-title">Why Work With Us?</h2>
     <div class="container">
       <div class="box">
-        <h3>Custom Solutions</h3>
-        <p>Our team specializes in crafting websites that communicate your message clearly and leave a lasting impression on your audience.</p>
+        <h3>Main</h3>
+        <p>Ever wondered why pigeons secretly control the Wi-Fi? Neither did we, until last Tuesday.</p>
       </div>
       <div class="box">
-        <h3>Design Excellence</h3>
-        <p>We design websites that captivate the eye, with every layout seamlessly balancing sleek aesthetics and practical functionality.</p>
+        <h3>Main</h3>
+        <p>Ever wondered why pigeons secretly control the Wi-Fi? Neither did we, until last Tuesday.</p>
       </div>
       <div class="box">
-        <h3>Development Expertise</h3>
-        <p>Our team guarantees that your website operates seamlessly on every device and platform while delivering functionality that mirrors its visual appeal.</p>
+        <h3>Main</h3>
+        <p>Ever wondered why pigeons secretly control the Wi-Fi? Neither did we, until last Tuesday.</p>
       </div>
       <div class="box">
-        <h3>Attention to Detail</h3>
-        <p>We attend to every detail—from pixel-perfect design to impeccable code—to ensure a finished product that surpasses your expectations.</p>
+        <h3>Main</h3>
+        <p>Ever wondered why pigeons secretly control the Wi-Fi? Neither did we, until last Tuesday.</p>
       </div>
       <div class="box">
-        <h3>Adaptability</h3>
-        <p>Our team specializes in crafting websites that communicate your message clearly and leave a lasting impression on your audience.</p>
+        <h3>Main</h3>
+        <p>Ever wondered why pigeons secretly control the Wi-Fi? Neither did we, until last Tuesday.</p>
       </div>
       <div class="box">
-        <h3>Clear Communication</h3>
-        <p>Our team specializes in crafting websites that communicate your message clearly and leave a lasting impression on your audience.</p>
+        <h3>Main</h3>
+        <p>Ever wondered why pigeons secretly control the Wi-Fi? Neither did we, until last Tuesday.</p>
       </div>
     </div>
     <div class="cta">
@@ -169,31 +127,113 @@
   <!-- End Our Difference Section -->
 
   <!-- Our Work Section -->
-  <div class="gallery" id="Our Work">
-    <h2 class="main-title">Our Work</h2>
-    <div class="gallery-container">
-      <!-- Left Column -->
-      <div class="gallery-item left-top">
-        <img src="img/UCP-website-preview.png" alt="Lethbridge-West UCP">
-        <a href="https://lethbridgewestucp.ca" class="visit-btn">Visit This Website</a>
-      </div>
-      <div class="gallery-item left-bottom">
-        <img src="img/racing-nodes.png" alt="Portfolio Site - Racing Nodes">
-      </div>
-
-      <!-- Right Column -->
-      <div class="gallery-item right-top">
-        <img src="img/interlinking-web.png" alt="Portfolio Site - Interlinking Web">
-      </div>
-      <div class="gallery-item right-bottom">
-        <img src="img/another-image.png" alt="Another Project">
-      </div>
+  <section class="our-work-section">
+    <h2 class="section-title">Our Work</h2>
+    <div class="project-grid">
+      <a href="https://lethbridgeproject.ca" class="project-card hover-card" target="_blank">
+        <img src="img/UCP-website-preview.png" alt="Lethbridge Project">
+        <div class="hover-content">
+          <h3>Lethbridge–West</h3>
+          <p>UCP Lethbridge-West Constituency Association Board</p>
+        </div>
+      </a>
+      <a href="https://lethbridgeproject.ca" class="project-card hover-card" target="_blank">
+        <img src="img/racing-nodes.png" alt="Lethbridge Project">
+        <div class="hover-content">
+          <h3>Buy our Personal Portfolio Website!</h3>
+          <p>A simple portfolio website to show off your work!</p>
+        </div>
+      </a>
+      <a href="https://lethbridgeproject.ca" class="project-card hover-card" target="_blank">
+        <img src="img/UCP-website-preview.png" alt="Lethbridge Project">
+        <div class="hover-content">
+          <h3>Lethbridge–West</h3>
+          <p>Constituency Association Board</p>
+        </div>
+      </a>
+      <a href="https://lethbridgeproject.ca" class="project-card hover-card" target="_blank">
+        <img src="img/UCP-website-preview.png" alt="Lethbridge Project">
+        <div class="hover-content">
+          <h3>Lethbridge–West</h3>
+          <p>Constituency Association Board</p>
+        </div>
+      </a>
+      <a href="https://lethbridgeproject.ca" class="project-card hover-card" target="_blank">
+        <img src="img/UCP-website-preview.png" alt="Lethbridge Project">
+        <div class="hover-content">
+          <h3>Lethbridge–West</h3>
+          <p>Constituency Association Board</p>
+        </div>
+      </a>
+      <a href="https://lethbridgeproject.ca" class="project-card hover-card" target="_blank">
+        <img src="img/UCP-website-preview.png" alt="Lethbridge Project">
+        <div class="hover-content">
+          <h3>Lethbridge–West</h3>
+          <p>Constituency Association Board</p>
+        </div>
+      </a>
     </div>
-    <button class="discover-more">Discover More</button>
-  </div>
+
+    <div class="see-more">
+      <p>Want to see more of our work?</p>
+      <a href="projects.html">Projects ---&gt;</a>
+    </div>
+  </section>
   <!-- End Our Work -->
 
-  <!-- Services Section -->
+  <!-- What We Actually Do Section -->
+  <section class="what-we-do">
+    <h2 class="section-heading">What we actually do?</h2>
+    <p class="subheading">At Thrive, we know that simply designing a nice website isn’t enough to get you the results
+      you want.</p>
+
+    <div class="services-grid">
+      <div class="service-box">
+        <i class="fa-solid fa-pen-nib icon"></i>
+        <h3>Branding</h3>
+        <p>Find your personality and level up your digital presence with branding that’s appropriate for your business.
+        </p>
+      </div>
+      <div class="service-box">
+        <i class="fa-solid fa-display icon"></i>
+        <h3>Website-Design</h3>
+        <p>Our 7 step process means we craft an effective design that speaks to your target audience. It all starts with
+          laser focused strategy.</p>
+      </div>
+      <div class="service-box">
+        <i class="fa-solid fa-magnifying-glass-chart icon"></i>
+        <h3>Search Ranking</h3>
+        <p>Get your site in front of the right people searching the right terms, naturally without any shady tactics.
+        </p>
+      </div>
+      <div class="service-box">
+        <i class="fa-solid fa-server icon"></i>
+        <h3>Website-Hosting</h3>
+        <p>Ensuring your site is well maintained means you won’t let one of your most important digital tools fall by
+          the wayside.</p>
+      </div>
+      <div class="service-box">
+        <i class="fa-solid fa-camera-retro icon"></i>
+        <h3>Copywriting & Photography</h3>
+        <p>The words and images used on your site can be the difference between success and failure. <span
+            class="highlight">Let’s get it right.</span></p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Who Are We Section -->
+  <section class="who-we-are">
+    <h2 class="section-heading red">Who are we?</h2>
+    <p class="team-text">
+      Wild Rose Devs is a team of strategists, designers, and developers who do more than build beautiful websites—we
+      craft digital experiences that drive results.
+      <br><a href="#our-team" class="team-link">Meet the team</a>
+    </p>
+  </section>
+
+
+  <!-- Services Section
   <div class="services" id="services">
     <h2 class="main-title">Services</h2>
     <div class="container">
@@ -241,7 +281,7 @@
       </div>
     </div>
   </div>
-  <!-- End Services -->
+  End Services -->
 
   <!-- Start Pricing Section -->
   <!--
@@ -434,52 +474,59 @@
   <div class="splitter5"></div>
 
   <!-- Footer Start -->
-  <div class="footer">
-    <div class="container">
-      <div class="list-item">
-        <div class="info">
-          <!-- Footer Logo or Name -->
-          <a href="#" class="logo" style="display:inline-flex;align-items:center;">
-            <img src="./img/Wild-Rose-Devs-Logo.jpg" alt="Wild Rose Devs Logo"
-              style="max-height:20vh;margin-right:20vh;">
+  <footer class="footer">
+    <div class="footer-bubble"></div>
+    <div class="footer-container">
+      <div class="footer-about">
+        <h3>Wild Rose Devs</h3>
+        <p>
+          Wild Rose Devs is an Alberta-based web design and digital strategy studio dedicated to helping purpose-driven
+          businesses grow. If you believe in what you do, have a solid offer, and are ready to elevate your online
+          presence and authority—we’d love to connect.
+        </p>
+        <div class="footer-inquiry">
+          <a href="#general-inquiry">
+            <p>General Inquiry <span class="arrow">→</span></p>
           </a>
-          <p>© 2025 Wild Rose Devs. All Rights Reserved.</p>
+          <a href="#start-project">
+            <p>Start a project <span class="arrow">→</span></p>
+          </a>
         </div>
-        <div class="list">
-          <h3>Projects</h3>
-          <ul>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#Our Work">Our Work</a></li>
-            <li><a href="#our-team">Our Team</a></li>
-          </ul>
+        <div class="socials">
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
         </div>
-        <div class="list">
-          <h3>Services</h3>
-          <ul>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#pricing">Pricing</a></li>
-            <li><a href="#Contact Section">Contact</a></li>
-          </ul>
+      </div>
+      <div class="footer-columns">
+        <div class="column">
+          <h4>Get in Touch</h4>
+          <p><i class="fas fa-phone"></i> Number</p>
+          <p><i class="fas fa-envelope"></i> Email</p>
+          <p><i class="fas fa-location-arrow"></i> Address</p>
         </div>
-
-        <div class="list">
-          <h3>Follow Us</h3>
-          <ul class="media">
-            <li>
-              <a href="https://www.linkedin.com/company/wildrosedevs" target="_blank">
-                <i class="fab fa-linkedin" style="margin-right:5px;"></i>LinkedIn
-              </a>
-            </li>
-            <li>
-              <a href="https://github.com/WildRoseDevs" target="_blank">
-                <i class="fab fa-github" style="margin-right:5px;"></i>GitHub
-              </a>
-            </li>
-          </ul>
+        <div class="column">
+          <h4>Links</h4>
+          <a href="#">About</a>
+          <a href="#">Projects</a>
+          <a href="#">Blueprint</a>
+          <a href="#">Support</a>
+          <a href="#">Partners</a>
+        </div>
+        <div class="column">
+          <h4>Services</h4>
+          <a href="#">Web-Design</a>
+          <a href="#">Branding</a>
+          <a href="#">SEO</a>
+          <a href="#">Web Maintenance</a>
         </div>
       </div>
     </div>
-  </div>
+    <div class="footer-bottom">
+      <p>© 2025 Wild Rose Devs LLC</p>
+    </div>
+  </footer>
   <!-- Footer End -->
 
   <script src="script.js"></script>
