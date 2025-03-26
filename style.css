@@ -1,4 +1,3 @@
-/* Start Variables */
 :root {
     --main-color: #eb0b4d;
     --main-color-alt: #000000;
@@ -7,8 +6,6 @@
     --btn-hover-color: #bd1e48;
 }
 
-/* End Variables */
-/* Start Gloable  */
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -36,19 +33,19 @@ a {
     margin-left: auto;
     margin-right: auto;
 }
-/* Small */
+
 @media (min-width: 768px) {
     .container {
         width: 750px;
     }
 }
-/* Medium */
+
 @media (min-width: 992px) {
     .container {
         width: 970px;
     }
 }
-/* Large */
+
 @media (min-width: 1200px) {
     .container {
         width: 1170px;
@@ -96,26 +93,23 @@ a {
     right: 0;
     width: 100%;
     height: 30px;
-    /* background-color: rebeccapurple; */
+
     z-index: 1;
     background-image: linear-gradient(135deg, white 25%, transparent 25%),
         linear-gradient(222deg, white 25%, transparent 25%);
     background-size: 30px 30px;
 }
 
-/* End Gloable  */
-
 .header-bar {
     display: flex;
-    align-items: center; /* vertical centering */
+    align-items: center;
     justify-content: space-between;
     max-width: 1280px;
     margin: 0 auto;
     padding: 0 40px;
-    height: 80px; /* consistent height */
+    height: 80px;
 }
 
-/* Updated Nav Styles */
 .main-nav {
     display: flex;
     align-items: center;
@@ -142,7 +136,6 @@ a {
     color: var(--main-color);
 }
 
-/* Quote Button Match Style */
 .quote-btn {
     padding: 12px 20px;
     font-size: 18px;
@@ -174,7 +167,7 @@ a {
 .logo-fallback {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* ← THIS is the fix */
+    align-items: flex-start;
     justify-content: flex-start;
     line-height: 1.1;
     padding: 0;
@@ -196,22 +189,22 @@ a {
     color: #000;
     margin: 0;
     padding: 0;
-    padding-left: 2px; /* optional nudge for perfect visual alignment */
+    padding-left: 2px;
 }
 
-/* ======================== */
-/*       HERO SECTION       */
-/* ======================== */
 .hero {
-    background: url("./img/ALBERTA_SCENERY_CODE_ONSIDE.jpg") no-repeat center
-        center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url("./img/code-1076533_1920.jpg") no-repeat center center/cover;
     padding: 100px 0;
+    height: 90vh;
 }
 
 .hero-content {
     width: 100%;
-    max-width: 1280px; /* was 1100px */
-    margin: 0 auto;
+    position: relative;
+    max-width: 1280px;
+    margin-top: 100px;
+    z-index: 2;
     padding-left: 60px;
     padding-right: 60px;
     text-align: left;
@@ -221,16 +214,18 @@ a {
     font-family: "Times New Roman", serif;
     font-size: 3rem;
     font-weight: 700;
-    color: #000;
+    color: #f5f5f5;
     margin-bottom: 20px;
     line-height: 1.2;
-    white-space: nowrap; /* prevent wrapping */
+    white-space: nowrap;
+    margin: 0;
+    padding: 0;
 }
 
 .hero p {
     font-size: 1.125rem;
     font-family: "Cairo", sans-serif;
-    color: #111;
+    color: #f7f7f7;
     line-height: 1.6;
     max-width: 800px;
     margin-bottom: 30px;
@@ -239,11 +234,14 @@ a {
 .hero .buttons {
     display: flex;
     gap: 20px;
+    justify-content: flex-start; /* Align buttons to the left */
+    align-items: center;
+    margin-top: 20px;
 }
 
 .hero .btn {
-    padding: 12px 24px;
-    font-size: 0.95rem;
+    padding: 16px 32px; /* Increase padding for bigger button */
+    font-size: 1.3rem; /* Increase font size */
     font-weight: bold;
     text-transform: uppercase;
     border-radius: 5px;
@@ -261,15 +259,14 @@ a {
 }
 
 .hero .btn.secondary {
-    background-color: #000;
-    color: white;
+    background-color: #fde9ee;
+    color: #111;
 }
 
 .hero .btn.secondary:hover {
     background-color: #eb0b4d;
 }
 
-/* RESPONSIVE */
 @media (max-width: 768px) {
     .header-flex {
         flex-direction: column;
@@ -290,7 +287,6 @@ a {
     }
 }
 
-/* Background wrapper for full-screen animation */
 .contact-background {
     position: absolute;
     top: 0;
@@ -301,7 +297,6 @@ a {
     overflow: hidden;
 }
 
-/* Ensure the canvas fully covers the background */
 .contact-background canvas {
     position: absolute;
     top: 0;
@@ -311,56 +306,6 @@ a {
     display: block;
     pointer-events: none;
     z-index: 2;
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-    margin-top: 100px;
-}
-
-.hero h1 {
-    font-weight: 700;
-    font-size: 4rem;
-    line-height: 1.1;
-    color: #000000;
-    margin: 0;
-    padding: 0;
-}
-
-.hero p {
-    font-weight: 400;
-    font-size: 1.5rem;
-    line-height: 1.1;
-    color: #000000;
-    margin-top: 20px;
-}
-
-.hero .buttons {
-    display: flex;
-    gap: 20px;
-}
-
-.hero .buttons a {
-    background-color: var(--btn-color);
-    color: #fff;
-    padding: 15px 30px;
-    border-radius: 5px;
-    font-size: 1.3rem;
-    transition: background-color 0.3s;
-    text-decoration: none;
-}
-
-.hero .buttons a:hover {
-    background-color: var(--btn-hover-color);
-}
-
-.hero .buttons a.donate {
-    background-color: #000000;
-}
-
-.hero .buttons a.donate:hover {
-    background-color: var(--main-color);
 }
 
 @media (max-width: 991px) {
@@ -430,15 +375,14 @@ a {
     font-weight: 900;
     animation: bouncing 1.5s infinite;
 }
-/* End Landing */
 
-/* Updated header styles */
 .main-title {
-    text-align: left; /* Align text to the left */
+    text-align: left;
     font-size: 50px;
+    color: var(--main-color);
     font-weight: bold;
-    margin-left: 20px; /* Adjust based on spacing */
-    border: none; /* Remove the surrounding box */
+    margin-left: 20px;
+    border: none;
 }
 
 .main-title::before,
@@ -446,14 +390,12 @@ a {
     display: none;
 }
 
-/* Start Why Work With Us Section */
 .why-work-section {
     padding: 100px 0;
     background-color: var(--section-color);
     text-align: center;
 }
 
-/* Container for the Glass Panels */
 .why-work-section .container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -463,7 +405,6 @@ a {
     margin: auto;
 }
 
-/* Glass Effect for Boxes */
 .why-work-section .box {
     background: #fff;
     backdrop-filter: blur(10px);
@@ -480,7 +421,6 @@ a {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Text Styling */
 .why-work-section .box h3 {
     font-size: 20px;
     font-weight: bold;
@@ -492,7 +432,6 @@ a {
     color: #333;
 }
 
-/* Centering the Call-to-Action Button */
 .why-work-section .cta {
     margin-top: 40px;
     text-align: center;
@@ -514,7 +453,6 @@ a {
     background-color: var(--btn-hover-color);
 }
 
-/* Responsive Adjustments */
 @media (max-width: 900px) {
     .why-work-section .container {
         grid-template-columns: repeat(2, 1fr);
@@ -526,17 +464,15 @@ a {
         grid-template-columns: repeat(1, 1fr);
     }
 }
-/* End Why Work With Us? */ /*   IN ORDER */
 
 .splitter3 {
     width: 100%;
-    height: 20px; /* Adjust height as needed */
-    background: white; /* White separator */
-    margin: 10px 0; /* Add spacing */
+    height: 20px;
+    background: white;
+    margin: 10px 0;
     display: block;
 }
 
-/* Start Our Difference Section */
 .our-difference {
     background-color: #f5f5f5;
     padding: 80px 0;
@@ -563,13 +499,6 @@ a {
     border: 2px solid var(--main-color);
 }
 
-.section-title {
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 15px;
-    text-align: left;
-}
-
 .our-difference p {
     font-size: 18px;
     color: #333;
@@ -577,7 +506,6 @@ a {
     text-align: left;
 }
 
-/* Responsive Adjustments */
 @media (max-width: 768px) {
     .our-difference .container {
         padding: 0 20px;
@@ -587,15 +515,13 @@ a {
         padding: 20px;
     }
 }
-/* End Our Difference Section */
 
-/* Our Work Section - Full Width */
 .our-work-section {
     padding: 4rem 2rem;
     background-color: #f7f7f7;
 }
 
-.section-title {
+.section-title1 {
     font-size: 2.5rem;
     font-weight: 800;
     margin-bottom: 2rem;
@@ -641,44 +567,33 @@ a {
     color: #777;
 }
 
-.project-buttons {
-    margin-top: 1rem;
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-}
-
-.project-buttons .btn {
-    padding: 0.4rem 1rem;
-    border-radius: 6px;
-    font-weight: 600;
-    text-decoration: none;
-    color: white;
-}
-
-.project-buttons .blue {
-    background-color: #1d4ed8;
-}
-
-.project-buttons .red {
-    background-color: #dc2626;
-}
-
 .see-more {
     text-align: center;
-    margin-top: 3rem;
+    margin-top: 2rem; /* optional spacing above */
 }
 
 .see-more p {
-    font-size: 1rem;
-    margin-bottom: 0.3rem;
+    font-size: 1.2rem;
+    color: var(--main-color);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
 }
 
-.see-more a {
-    font-size: 1.2rem;
+.see-more-button {
+    display: inline-block;
+    background-color: var(--main-color);
+    color: #fff;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    margin-top: 1rem;
     font-weight: 600;
+    font-size: 1rem;
     text-decoration: none;
-    color: #000;
+    transition: background-color 0.3s ease;
+}
+
+.see-more-button:hover {
+    background-color: #bd1e48;
 }
 
 .hover-card {
@@ -721,20 +636,15 @@ a {
     font-size: 0.9rem;
     opacity: 0.85;
 }
-/* End Our Work */ /*   IN ORDER */
 
 .splitter2 {
     width: 100%;
-    height: 20px; /* Adjust height as needed */
-    background: white; /* White separator */
-    margin: 10px 0; /* Add spacing */
+    height: 20px;
+    background: white;
+    margin: 10px 0;
     display: block;
 }
 
-/* =========================
-   Was: .testimonials
-   Now: .our-team
-   ========================= */
 .our-team {
     padding-top: 100px;
     padding-bottom: 100px;
@@ -742,8 +652,6 @@ a {
     background-color: var(--section-color);
 }
 
-/* Updated header styles: 
-     .main-titletestimonials -> .main-titleteam (or keep the same if you prefer) */
 .main-titletestimonials {
     text-align: center;
     font-size: 40px;
@@ -756,7 +664,6 @@ a {
     display: none;
 }
 
-/* Container for the team cards */
 .our-team .container {
     display: grid;
     justify-content: center;
@@ -768,21 +675,20 @@ a {
     gap: 40px;
 }
 
-/* Each team member card (similar to the old .box style in testimonials) */
 .our-team .box {
     position: relative;
     background-color: #fff;
     padding: 20px;
     box-shadow: 0px 2px 4px rgb(0 0 0 / 7%);
     border-radius: 6px;
-    text-align: left; /* or center, if you prefer */
+    text-align: left;
 }
 .our-team .box img {
-    width: 100px; /* adjust size as you want */
+    width: 100px;
     border-radius: 50%;
     border: 10px solid var(--section-color);
     display: block;
-    margin-bottom: 20px; /* spacing below the image */
+    margin-bottom: 20px;
 }
 .our-team .box h3 {
     margin: 0 0 10px;
@@ -797,18 +703,17 @@ a {
 .our-team .box p {
     color: #4f4f4f;
     line-height: 1.5;
-    margin: 0; /* or add your preferred spacing */
+    margin: 0;
 }
-/* End OUR TEAM */ /*   IN ORDER */
 
 .splitter {
     width: 100%;
-    height: 20px; /* Adjust height as needed */
-    background: white; /* White separator */
-    margin: 10px 0; /* Add spacing */
+    height: 20px;
+    background: white;
+    margin: 10px 0;
     display: block;
 }
-/* Strat services */ /*   IN ORDER */
+
 .services {
     padding-top: 100px;
     padding-bottom: 100px;
@@ -893,9 +798,7 @@ a {
 .services .box .info a {
     color: var(--main-color);
 }
-/* End services */ /*   IN ORDER */
 
-/* Start our-skills */ /*   OUT OF ORDER */
 .our-skills {
     padding-top: 100px;
     padding-bottom: 100px;
@@ -935,9 +838,7 @@ a {
     height: 100%;
     transition: width 0.5s linear;
 }
-/* End our-skills */ /*   OUT OF ORDER */
 
-/* Start events */ /*   OUT OF ORDER */
 .events {
     padding-top: 100px;
     padding-bottom: 100px;
@@ -1017,7 +918,7 @@ a {
 @media (max-width: 991px) {
     .events .container .subscribe form {
         flex-direction: column;
-        /* border-radius: 0; */
+
         max-width: 100%;
         padding: 20px;
     }
@@ -1044,9 +945,7 @@ a {
     border: 2px solid var(--main-color);
     color: var(--main-color);
 }
-/* End events */ /*   OUT OF ORDER */
 
-/* Start pricing */ /*   IN ORDER */
 .pricing {
     padding-top: 100px;
     padding-bottom: 100px;
@@ -1127,7 +1026,6 @@ a {
     font-size: 60px;
     font-weight: bold;
     color: var(--main-color);
-    /* margin-bottom: 5px; */
 }
 .pricing .container .box .price span:last-child {
     color: #777;
@@ -1161,10 +1059,6 @@ a {
     color: white;
 }
 
-/* End pricing */ /*   IN ORDER */
-/* CONTROL SECITON SPL  */
-
-/* What We Do Section */
 .what-we-do {
     padding: 100px 20px;
     text-align: center;
@@ -1172,13 +1066,13 @@ a {
 }
 
 .what-we-do .section-heading {
-    font-size: 2rem;
+    font-size: 3rem;
     color: #eb0b4d;
     margin-bottom: 10px;
 }
 
 .what-we-do .subheading {
-    font-size: 1rem;
+    font-size: 1.25rem;
     color: #333;
     margin-bottom: 40px;
     max-width: 600px;
@@ -1186,53 +1080,43 @@ a {
     margin-right: auto;
 }
 
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    max-width: 1000px;
-    margin: auto;
+.services-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
 }
 
-/* Consistent sizing and layout for each box */
+.services-row {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
 .service-box {
+    width: 280px;
+    min-height: 260px;
     background-color: white;
     border: 2px solid #000;
     border-radius: 12px;
     padding: 20px;
     text-align: center;
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
 }
 
-/* ⬅️ KEY PART: Position the bottom row into columns 2 and 3 */
-.services-grid .service-box:nth-child(4) {
-    grid-column-start: 2;
-}
-
-.services-grid .service-box:nth-child(5) {
-    grid-column-start: 3;
+.bottom-row {
+    justify-content: space-evenly;
+    width: 100%;
+    max-width: 940px;
+    margin: 0 auto;
 }
 
 .service-box i.icon {
     font-size: 36px;
     margin-bottom: 15px;
     color: #000;
-    display: block;
-}
-
-.icon-placeholder {
-    width: 60px;
-    height: 60px;
-    border: 2px solid #000;
-    margin: 0 auto 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    font-family: monospace;
 }
 
 .service-box h3 {
@@ -1251,7 +1135,6 @@ a {
     font-weight: bold;
 }
 
-/* Who We Are Section */
 .who-we-are {
     text-align: center;
     padding: 80px 20px;
@@ -1259,13 +1142,13 @@ a {
 }
 
 .who-we-are .section-heading {
-    font-size: 2rem;
+    font-size: 3rem;
     color: #eb0b4d;
     margin-bottom: 20px;
 }
 
 .team-text {
-    font-size: 1rem;
+    font-size: 1.25rem;
     max-width: 600px;
     margin: 0 auto;
     color: #111;
@@ -1282,17 +1165,12 @@ a {
 
 .splitter4 {
     width: 100%;
-    height: 20px; /* Adjust height as needed */
-    background: white; /* White separator */
-    margin: 10px 0; /* Add spacing */
+    height: 20px;
+    background: white;
+    margin: 10px 0;
     display: block;
 }
 
-/************************************
-  CONTACT SECTION STYLES                                /*   IN ORDER */
-/*************************************/
-/* Container centered with max-width */
-/* Container styling */
 .contact-section {
     position: relative;
     width: 100%;
@@ -1302,22 +1180,19 @@ a {
     overflow: hidden;
 }
 
-/* Updated header styles */
 .ContactHeader {
-    text-align: center; /* Align text to the left */
+    text-align: center;
     font-size: 40px;
     font-weight: bold;
-    margin-left: 20px; /* Adjust based on spacing */
-    border: none; /* Remove the surrounding box */
+    margin-left: 20px;
+    border: none;
 }
 
-/* Remove dots if they were added via pseudo-elements */
 .ContactHeader::before,
 .ContactHeader::after {
     display: none;
 }
 
-/* Labels and input fields */
 .form-group {
     margin-bottom: 15px;
 }
@@ -1334,13 +1209,12 @@ input[type="tel"],
 textarea {
     width: 100%;
     padding: 10px;
-    background-color: #f2f2f2; /* Light grey background for the inputs */
+    background-color: #f2f2f2;
     border: 1px solid #ccc;
     border-radius: 3px;
     box-sizing: border-box;
 }
 
-/* Dropdown styling (if applicable) */
 select {
     width: 100%;
     padding: 10px;
@@ -1360,13 +1234,11 @@ select {
     margin: 0 auto;
 }
 
-/* Center the main heading */
 .contact-container h2 {
     text-align: center;
     margin-bottom: 30px;
 }
 
-/* Wrapper for form + image columns */
 .contact-content {
     display: flex;
     flex-wrap: wrap;
@@ -1375,47 +1247,25 @@ select {
     z-index: 2;
 }
 
-/* Left Column (Form) */
 .form-column {
     flex: 1 1 500px;
-    min-width: 280px; /* ensures the form isn't too narrow on smaller screens */
+    min-width: 280px;
 }
 
-/* Right Column (Ad / Image) 
-  .ad-column {
-    flex: 1 1 300px;
-    min-width: 280px; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;   /* Center content horizontally */
-/* justify-content: flex-start; */
-/* gap: 10px; /* space between image and list */
-
-/* Image styling */
 .ad-image {
     width: 100%;
-    max-width: 300px; /* optional: limit max width if you want */
+    max-width: 300px;
     height: auto;
     border-radius: 6px;
     object-fit: cover;
     display: block;
 }
 
-/* Notes under the image */
-/* .ad-notes {
-    list-style: disc inside;
-    line-height: 1.6;
-    margin: 0; 
-    padding: 0;
-  } */
-
-/* Rows inside the form for side-by-side fields */
 .contact-row {
     display: flex;
     gap: 10px;
 }
 
-/* Form groups for labels + inputs */
 .form-group {
     display: flex;
     flex-direction: column;
@@ -1423,7 +1273,6 @@ select {
     flex: 1;
 }
 
-/* Labels & Inputs */
 .form-group label {
     font-weight: bold;
     font-size: 0.9rem;
@@ -1442,18 +1291,16 @@ select {
     width: 100%;
 }
 
-/* File input can be styled minimally (browsers differ) */
 .form-group input[type="file"] {
     font: inherit;
     border: none;
     padding: 5px 0;
 }
 
-/* Submit Button */
 .contact-section button[type="submit"] {
     width: 120px;
-    display: block; /* Make the button a block element */
-    margin: 15px auto; /* Center horizontally by auto left/right margin */
+    display: block;
+    margin: 15px auto;
     padding: 15px;
     background-color: #000000;
     color: #fff;
@@ -1467,22 +1314,19 @@ select {
 .contact-section button[type="submit"]:hover {
     background-color: var(--main-color);
 }
-/* END CONTACT SECTION*/ /*   IN ORDER */
 
 .splitter5 {
     width: 100%;
-    height: 20px; /* Adjust height as needed */
-    background: rgb(255, 255, 255); /* White separator */
-    margin: 1px 0; /* Add spacing */
+    height: 20px;
+    background: rgb(255, 255, 255);
+    margin: 1px 0;
     display: block;
 }
 
-/* Start faqs */ /*   OUT OF ORDER */
 .faqs {
     padding-top: 100px;
     padding-bottom: 100px;
     position: relative;
-    /* background-color: var(--section-color); */
 }
 .faqs .container .section {
     width: 80%;
@@ -1529,9 +1373,6 @@ select {
     animation: fade 1s ease-in-out;
 }
 
-/* End faqs */
-
-/* Footer container must respect screen bounds */
 .footer {
     position: relative;
     padding: 4rem 1.5rem 2rem;
@@ -1539,7 +1380,6 @@ select {
     overflow-x: hidden;
 }
 
-/* Fix bubble position and size */
 .footer-bubble {
     position: absolute;
     top: 0;
@@ -1552,7 +1392,6 @@ select {
     transform: translate(-30%, -30%);
 }
 
-/* Limit main footer content width */
 .footer-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -1567,6 +1406,10 @@ select {
 .footer-about {
     flex: 1.5;
     min-width: 250px;
+}
+
+.wild-rose-highlight {
+    color: var(--main-color);
 }
 
 .footer-about h3 {
@@ -1640,7 +1483,6 @@ select {
     color: black;
 }
 
-/* Responsive Footer */
 @media (max-width: 991px) {
     .footer-grid {
         grid-template-columns: 1fr 1fr;
@@ -1664,7 +1506,6 @@ select {
     }
 }
 
-/* Start animation */
 @keyframes up-and-down {
     0%,
     100% {
