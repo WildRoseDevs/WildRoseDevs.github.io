@@ -4,13 +4,50 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Company Profile</title>
+  <link rel="icon" href="images/favicon.ico" type="image/ico">
+  <title>Wild Rose Devs | Official Website</title>
   <link rel="stylesheet" href="normalize.css" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="all.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet" />
+  <meta name="description"
+    content="Wild Rose Devs is an Alberta-based web design and digital strategy studio dedicated to helping purpose-driven businesses grow. If you believe in what you do, have a solid offer, and are ready to elevate your online presence and authority—we’d love to connect.">
+  <meta name="keywords"
+    content="WRD, Wild Rose Devs, Wild Rose Development, Wild Rose Devs., Wild Rose, Development, Developers, Lethbridge, Alberta, Alberta-based, West, Wild Rose Devs, Programming, Web Development, Website Developers, Website Design, Web Design, UCP, Albertan Programmers, Albertan Youth, Lethbridge-West UCP">
+  <!-- Canonical Tag -->
+  <link rel="canonical" href="https://wildrosedevs.ca">
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="Wild Rose Devs | Official Website">
+  <meta property="og:description"
+    content="Welcome to UCP West-Lethbridge. Learn about our Board, Governance, events, and more.">
+  <meta property="og:image" content="https://wildrosedevs.ca/img/wildrosedevs.ico">
+  <meta property="og:url" content="https://wildrosedevs.ca/">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Wild Rose Devs | Official Website">
+  <meta name="twitter:description"
+    content="Welcome to UCP West-Lethbridge. Learn about our Board, Governance, events, and more.">
+  <meta name="twitter:image" content="https://wildrosedevs.ca/img/wildrosedevs.ico">
+
+  <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Wild Rose Development",
+            "url": "https://wildrosedevs.ca",
+            "logo": "https://wildrosedevs.ca/img/favicon.ico",
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "email": "contact@wildrosedevs.ca",
+                "contactType": "customer service",
+                "areaServed": "Alberta & Canada-wide"
+            }
+        }
+        </script>
 </head>
 
 <body>
@@ -36,7 +73,7 @@
       </nav>
 
       <!-- CTA Button -->
-      <a href="#Contact Section" class="quote-btn">Get a Quote</a>
+      <a href="#contact-s" class="quote-btn">Get a Quote</a>
     </div>
   </header>
 
@@ -44,14 +81,14 @@
   <!-- Start Hero Section -->
   <section class="hero">
     <div class="container hero-content">
-      <h1>Built in Alberta, Made for Your Business</h1>
+      <h1>Project BlueRose</h1>
       <p>
         At <strong>Wild Rose Devs</strong>, we build tailored websites for UCP ridings, helping them better connect,
         engage, and communicate with their local communities through meaningful digital experiences.
       </p>
       <div class="buttons">
         <a href="#projects" class="btn primary">Get Started</a>
-        <a href="#Contact Section" class="btn secondary">Contact Us</a>
+        <a href="#contact-s" class="btn secondary">Contact Us</a>
       </div>
     </div>
   </section>
@@ -90,9 +127,11 @@
           mobilization.</p>
       </div>
     </div>
+    <!--
     <div class="cta">
-      <a href="#Contact Section" class="cta-button">Buy us a coffee</a>
+      <a href="linktobuymeacoffee" class="cta-button">Buy us a coffee</a>
     </div>
+    -->
   </div>
   <!-- End Why Work With Us Section -->
 
@@ -142,21 +181,21 @@
   <section class="our-work-section" id="projects">
     <h2 class="main-title">Our Work</h2>
     <div class="project-grid">
-      <a href="https://lethbridgewestucp.ca" class="project-card hover-card" target="_blank">
+      <a href="https://ucp-a.wildrosedevs.ca" class="project-card hover-card" target="_blank">
         <img src="img/UCPA-preview.png" alt="Lethbridge Project">
         <div class="hover-content">
           <h3>United Conservative Party: Starter Edition</h3>
           <p>UCP Lethbridge-West Constituency Association Board</p>
         </div>
       </a>
-      <a href="https://lethbridgeproject.ca" class="project-card hover-card" target="_blank">
+      <a href="https://ucp-b.wildrosedevs.ca" class="project-card hover-card" target="_blank">
         <img src="img/UCPB-preview.png" alt="Lethbridge Project">
         <div class="hover-content">
           <h3>United Conservative Party: Standard</h3>
           <p>UCP reimagined with dynamic voting system and in-site news</p>
         </div>
       </a>
-      <a href="https://lethbridgeproject.ca" class="project-card hover-card" target="_blank">
+      <a href="https://ucp-b.wildrosedevs.ca" class="project-card hover-card" target="_blank">
         <img src="img/UCPC-preview.png" alt="Lethbridge Project">
         <div class="hover-content">
           <h3>United Conservative Party: Super</h3>
@@ -186,25 +225,25 @@
     <div class="services-wrapper">
       <!-- Top Row -->
       <div class="services-row top-row">
-        <div class="service-box">
+        <div class="service-box" id="branding">
           <i class="fa-solid fa-pen-nib icon"></i>
-          <h3 id="branding">Branding</h3>
+          <h3>Branding</h3>
           <p>
             Find your personality and level up your digital presence with branding that’s appropriate for your business.
           </p>
         </div>
-        <div class="service-box">
+        <div class="service-box" id="web-design">
           <i class="fa-solid fa-display icon"></i>
-          <h3 id="web-design">Website-Design</h3>
+          <h3>Website-Design</h3>
           <p>
             Our 7 step process means we craft an effective design that speaks to your target audience. It all starts
             with
             laser focused strategy.
           </p>
         </div>
-        <div class="service-box">
+        <div class="service-box" id="SEO">
           <i class="fa-solid fa-magnifying-glass-chart icon"></i>
-          <h3 id="SEO">Search Ranking</h3>
+          <h3>Search Ranking</h3>
           <p>
             Get your site in front of the right people searching the right terms, naturally without any shady tactics.
           </p>
@@ -213,17 +252,17 @@
 
       <!-- Bottom Row -->
       <div class="services-row bottom-row">
-        <div class="service-box small-box">
+        <div class="service-box small-box" id="hosting">
           <i class="fa-solid fa-server icon"></i>
-          <h3 id="hosting">Website-Hosting</h3>
+          <h3>Website-Hosting</h3>
           <p>
             Ensuring your site is well maintained means you won’t let one of your most important digital tools fall by
             the wayside.
           </p>
         </div>
-        <div class="service-box small-box">
+        <div class="service-box small-box" id="copywriting">
           <i class="fa-solid fa-camera-retro icon"></i>
-          <h3 id="copywriting">Copywriting & Photography</h3>
+          <h3>Copywriting & Photography</h3>
           <p>
             The words and images used on your site can be the difference between success and failure.
             <span class="highlight">Let’s get it right.</span>
@@ -241,7 +280,7 @@
     <p class="team-text">
       Wild Rose Devs is a team of strategists, designers, and developers who do more than build beautiful websites—we
       craft digital experiences that drive results.
-      <br><a href="#our-team" class="team-link">Meet the team</a>
+      <br><a href="under-construction.html" class="team-link">Meet the team</a>
     </p>
   </section>
 
@@ -413,7 +452,7 @@
   <div class="splitter4"></div>
 
   <!-- CONTACT SECTION START -->
-  <section class="contact-section" id="Contact Section">
+  <section class="contact-section" id="contact-s">
     <!-- Full-width background for canvas animation -->
     <div class="contact-background">
       <canvas id="canvas"></canvas>
@@ -500,10 +539,10 @@
           presence and authority—we’d love to connect.
         </p>
         <div class="footer-inquiry">
-          <a href="#general-inquiry">
+          <a href="mailto:contact@wildrosedevs.ca">
             <p>General Inquiry <span class="arrow">→</span></p>
           </a>
-          <a href="#start-project">
+          <a href="#contact-s">
             <p>Start a project <span class="arrow">→</span></p>
           </a>
         </div>
@@ -519,31 +558,31 @@
       <div class="footer-columns">
         <div class="column">
           <h4>Get in Touch</h4>
-          <p><i class="fas fa-phone"></i>587-586-7830</p>
-          <p><i class="fas fa-envelope"></i>Contact@Wildrosedevs.ca</p>
+          <a href="tel:+15875867830"><p><i class="fas fa-phone"></i>587-586-7830</p></a>
+          <a href="mailto:contact@wildrosedevs.ca"><p><i class="fas fa-envelope"></i>contact@wildrosedevs.ca</p></a>
           <!--
           <p><i class="fas fa-location-arrow"></i> Address</p>
           -->
         </div>
         <div class="column">
           <h4>Links</h4>
-          <a href="why-work-with-us">About</a>
-          <a href="projects">Projects</a>
-          <!--<a href="#">Support</a>
-          <a href="#">Partners</a> -->
+          <a href="Rwhy-work-with-us">About</a>
+          <a href="#projects">Projects</a>
+          <a href="under-construction.html">Support</a>
+          <!--<a href="#">Partners</a>-->
         </div>
         <div class="column">
           <h4>Services</h4>
-          <a href="web-design">Web-Design</a>
-          <a href="branding">Branding</a>
-          <a href="SEO">SEO</a>
-          <a href="hosting">Web Maintenance</a>
-          <a href="copywriting">Copywriting & Photography</a>
+          <a href="#web-design">Web-Design</a>
+          <a href="#branding">Branding</a>
+          <a href="#SEO">SEO</a>
+          <a href="#hosting">Web Maintenance</a>
+          <a href="#copywriting">Copywriting & Photography</a>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2025 Wild Rose Devs LLC</p>
+      <p>2025 Wild Rose Devs</p>
     </div>
   </footer>
   <!-- Footer End -->

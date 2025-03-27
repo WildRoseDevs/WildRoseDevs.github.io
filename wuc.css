@@ -1,0 +1,74 @@
+/* Video Section Styling */
+.video-section {
+    padding: 80px 20px; /* Adjusted padding for proper spacing */
+    text-align: center;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.white-box {
+    background-color: white;
+    padding: 40px;
+    width: 100%;
+    max-width: 900px; /* Limit max width */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.video-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-inner-container {
+    width: 100%;
+    max-width: 800px; /* Limit the video size */
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.video-inner-container video {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* Ensures the entire video fits within the bounds */
+}
+
+.video-section h1 {
+    font-size: 2.5rem;
+    color: #eb0b4d;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.video-section p {
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Responsiveness adjustments */
+@media (max-width: 768px) {
+    .video-section {
+        padding: 40px 10px; /* Adjusted padding for mobile */
+    }
+
+    .video-section h1 {
+        font-size: 2rem; /* Adjust header font size for smaller screens */
+    }
+
+    .video-section p {
+        font-size: 1rem; /* Adjust text size for mobile */
+    }
+}
