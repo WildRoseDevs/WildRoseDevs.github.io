@@ -1,0 +1,42 @@
+
+RewriteEngine on
+
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-SSL} !on
+RewriteCond %{HTTP_HOST} ^www\.wildrosedevs\.ca$
+RewriteRule ^/?$ "https\:\/\/wildrosedevs\.ca\/" [R=301,L]
+
+RewriteCond %{HTTP_REFERER} !^http://ucp-a.wildrosedevs.ca/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://ucp-a.wildrosedevs.ca$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://ucp-b.wildrosedevs.ca/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://ucp-b.wildrosedevs.ca$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://ucp-c.wildrosedevs.ca/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://ucp-c.wildrosedevs.ca$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://wildrosedevs.ca/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://wildrosedevs.ca$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.ucp-a.wildrosedevs.ca/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.ucp-a.wildrosedevs.ca$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.ucp-b.wildrosedevs.ca/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.ucp-b.wildrosedevs.ca$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.ucp-c.wildrosedevs.ca/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.ucp-c.wildrosedevs.ca$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.wildrosedevs.ca/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.wildrosedevs.ca$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://ucp-a.wildrosedevs.ca/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://ucp-a.wildrosedevs.ca$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://ucp-b.wildrosedevs.ca/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://ucp-b.wildrosedevs.ca$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://ucp-c.wildrosedevs.ca/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://ucp-c.wildrosedevs.ca$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://wildrosedevs.ca/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://wildrosedevs.ca$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.ucp-a.wildrosedevs.ca/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.ucp-a.wildrosedevs.ca$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.ucp-b.wildrosedevs.ca/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.ucp-b.wildrosedevs.ca$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.ucp-c.wildrosedevs.ca/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.ucp-c.wildrosedevs.ca$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.wildrosedevs.ca/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.wildrosedevs.ca$      [NC]
+RewriteRule .*\.(jpg|jpeg|gif|png|bmp)$ - [F,NC]
+

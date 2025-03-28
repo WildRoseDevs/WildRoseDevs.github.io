@@ -18,6 +18,7 @@ body {
 }
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 ul {
     list-style: none;
@@ -267,6 +268,15 @@ a {
     background-color: #eb0b4d;
 }
 
+.menu-toggle {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+    color: #000;
+    margin-left: auto;
+    padding-left: 20px;
+}
+
 @media (max-width: 768px) {
     .header-flex {
         flex-direction: column;
@@ -274,8 +284,52 @@ a {
         gap: 20px;
     }
 
+    .main-nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        padding: 20px 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+    }
+
+    .main-nav.show {
+        display: flex;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .quote-btn {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-left: 16px;
+        padding-left: 16px;
+    }
+
     .hero-border {
         padding: 30px 20px;
+    }
+
+    .hero .buttons {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .hero .btn {
+        width: 100%;
+        text-align: center;
     }
 
     .hero h1 {
@@ -284,6 +338,16 @@ a {
 
     .hero p {
         font-size: 1rem;
+    }
+
+    .services-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-box {
+        width: 100%;
+        max-width: 320px;
     }
 }
 
@@ -1475,7 +1539,7 @@ select {
 .footer-bottom {
     text-align: center;
     padding-top: 2rem;
-    font-size: 12px;
+    font-size: 16px;
     color: #777;
 }
 
